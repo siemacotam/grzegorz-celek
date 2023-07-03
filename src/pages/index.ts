@@ -1,2 +1,4 @@
-export * from './NoRoute';
-export * from './Home';
+export * from './About';
+export * from './Contact';
+export * from './Experience';
+export * from './Skills';

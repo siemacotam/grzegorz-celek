@@ -1,10 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from '../../store';
-import { initialState } from './viewReducer.const';
+import { viewReducerInitialState } from './viewReducer.const';
 
 export const viewSlice = createSlice({
   name: 'view',
-  initialState,
+  initialState: viewReducerInitialState,
   reducers: {
     changeViewMode: (state, action: PayloadAction<'light' | 'dark'>) => {
       return { ...state, mode: action.payload };
@@ -13,7 +12,5 @@ export const viewSlice = createSlice({
 });
 
 export const { changeViewMode } = viewSlice.actions;
-
-export const selectCount = (state: RootState) => state.view;
 
 export default viewSlice.reducer;

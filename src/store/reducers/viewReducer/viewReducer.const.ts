@@ -1,5 +1,5 @@
-import { State } from './viewReducer.types';
+import { ViewReducerState } from './viewReducer.types';
 
-export const initialState: State = {
+export const viewReducerInitialState: ViewReducerState = {
   mode: 'light'
 };

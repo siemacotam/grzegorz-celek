@@ -3,6 +3,13 @@ import Image from 'images/grzesiek_2.jpg';
 import Background from 'images/mountains.jpg';
 
 const imageSize = 200;
+export const maxContentWidth = '1300px';
+
+export const HeaderContainer = styled('div')({
+  width: '100%',
+  maxWidth: maxContentWidth,
+  margin: '0 auto'
+});
 
 export const MainPhoto = styled('div')({
   border: '3px solid white',
@@ -32,5 +39,10 @@ export const BackgroundPhoto = styled('div')({
 
 export const NameContainer = styled('div')({
   marginLeft: '250px',
-  padding: '20px'
+  padding: '20px',
+  height: `${imageSize / 2 + 20}px`
 });
+
+export const NavContainer = styled('div')(({ theme }) => ({
+  borderTop: `1px solid ${theme.palette.grey[300]}`
+}));
