@@ -22,7 +22,7 @@ export const LanguageSwitch = (): JSX.Element => {
 
   return (
     <Box>
-      <FormControl sx={{ width: '100px' }}>
+      <FormControl sx={{ width: '70px' }}>
         <Select size="small" value={locale.substring(0, 2).toUpperCase()} onChange={handleChange}>
           {options.map(({ label }) => (
             <MenuItem key={label} value={label}>
