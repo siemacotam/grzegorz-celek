@@ -1,10 +1,11 @@
-import { Box, MenuItem, FormControl, Select } from '@mui/material';
-import { SelectChangeEvent } from '@mui/material/Select';
+import { IconButton, Typography, Stack, useTheme } from '@mui/material';
 import { useContext } from 'react';
 import { LanguageContext } from 'AppTranslation/AppTranslation';
+import LanguageIcon from '@mui/icons-material/Language';
 
 export const LanguageSwitch = (): JSX.Element => {
   const { locale, switchToEn, switchToPl } = useContext(LanguageContext);
+  const theme = useTheme();
 
   const options = [
     {
@@ -17,20 +18,20 @@ export const LanguageSwitch = (): JSX.Element => {
     }
   ];
 
-  const handleChange = (event: SelectChangeEvent) =>
-    options.find((el) => el.label === event.target.value)?.fn();
-
   return (
-    <Box>
-      <FormControl sx={{ width: '70px' }}>
-        <Select size="small" value={locale.substring(0, 2).toUpperCase()} onChange={handleChange}>
-          {options.map(({ label }) => (
-            <MenuItem key={label} value={label}>
-              {label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </Box>
+    <IconButton
+      sx={{ color: theme.palette.primary.main }}
+      onClick={() => {
+        if (locale === 'pl-PL') options.find((el) => el.label === 'EN')?.fn();
+        if (locale === 'en-GB') options.find((el) => el.label === 'PL')?.fn();
+      }}
+    >
+      <Stack direction="row" alignItems="center" spacing={1}>
+        <LanguageIcon />
+        <Typography component="span" variant="caption">
+          {locale.substring(0, 2).toUpperCase()}
+        </Typography>
+      </Stack>
+    </IconButton>
   );
 };

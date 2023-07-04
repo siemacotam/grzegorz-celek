@@ -2,5 +2,12 @@
     "about" : "O mnie",
     "skills" : "Umiejętności",
     "contact" : "Kontakt",
-    "experience" : "Doświadczenie"
+    "experience" : "Doświadczenie",
+
+    "presentation" : "Prezentacja",
+
+    "kalisz" : "Kalisz, wielkopolskie, Polska",
+
+    "github" : "Sprawdź moje konto na Github",
+    "linkedin" : "Sprawdź moje konto na LinkedIn"
 }

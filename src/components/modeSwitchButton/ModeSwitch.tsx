@@ -11,7 +11,10 @@ export const ModeSwitch = (): JSX.Element => {
   const isDark = useAppSelector((store) => store.view.mode);
 
   return (
-    <IconButton onClick={() => dispatch(changeViewMode(isDark === 'light' ? 'dark' : 'light'))}>
+    <IconButton
+      sx={{ marginTop: '0 !important', color: theme.palette.primary.main }}
+      onClick={() => dispatch(changeViewMode(isDark === 'light' ? 'dark' : 'light'))}
+    >
       {theme.palette.mode === 'light' ? <Brightness7Icon /> : <Brightness4Icon />}
     </IconButton>
   );

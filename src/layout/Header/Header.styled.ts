@@ -1,9 +1,9 @@
-import { styled } from '@mui/material';
+import { styled, Stack } from '@mui/material';
 import Image from 'images/grzesiek_2.jpg';
 import Background from 'images/mountains.jpg';
 
 const imageSize = 200;
-export const maxContentWidth = '1300px';
+export const maxContentWidth = '1200px';
 
 export const HeaderContainer = styled('div')({
   width: '100%',
@@ -28,7 +28,7 @@ export const MainPhoto = styled('div')({
 export const BackgroundPhoto = styled('div')({
   borderBottomLeftRadius: '10px',
   borderBottomRightRadius: '10px',
-  height: '400px',
+  height: '500px',
   position: 'relative',
   width: '100%',
   backgroundImage: `url(${Background})`,
@@ -46,3 +46,12 @@ export const NameContainer = styled('div')({
 export const NavContainer = styled('div')(({ theme }) => ({
   borderTop: `1px solid ${theme.palette.grey[300]}`
 }));
+
+export const MenuContainer = styled(Stack)({
+  color: 'black',
+  width: maxContentWidth,
+  margin: '0 auto',
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+  flexDirection: 'row'
+});

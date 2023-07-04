@@ -2,5 +2,12 @@
     "about" : "About",
     "skills" : "Skills",
     "contact" : "Contact",
-    "experience" : "Experience"
+    "experience" : "Experience",
+
+    "presentation" : "Presentation",
+
+    "kalisz" : "Kalisz , Greater Poland, Poland",
+
+    "github" : "Check my github account",
+    "linkedin" : "Check my linkedin account"
 }

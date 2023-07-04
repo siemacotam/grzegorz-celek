@@ -8,10 +8,13 @@ export const mainSlice = createSlice({
   reducers: {
     changeSection: (state, action: PayloadAction<Sections>) => {
       return { ...state, activeSection: action.payload };
+    },
+    handleChatStatus: (state, action: PayloadAction<boolean>) => {
+      return { ...state, showChat: action.payload };
     }
   }
 });
 
-export const { changeSection } = mainSlice.actions;
+export const { changeSection, handleChatStatus } = mainSlice.actions;
 
 export default mainSlice.reducer;

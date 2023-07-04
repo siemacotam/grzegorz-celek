@@ -12,15 +12,15 @@ export const sections: SectionObject[] = [
     component: <About />
   },
   {
-    name: Sections.CONTACT,
-    component: <Contact />
+    name: Sections.SKILLS,
+    component: <Skills />
   },
   {
     name: Sections.EXPERIENCE,
     component: <Experience />
   },
   {
-    name: Sections.SKILLS,
-    component: <Skills />
+    name: Sections.CONTACT,
+    component: <Contact />
   }
 ];
