@@ -3,11 +3,20 @@
     "skills" : "Umiejętności",
     "contact" : "Kontakt",
     "experience" : "Doświadczenie",
+    "education" : "Edukacja",
 
     "presentation" : "Prezentacja",
+    "about-info" : "O mnie",
 
     "kalisz" : "Kalisz, wielkopolskie, Polska",
+    "hours" : "godzin spędzonych przed komputerem",
 
     "github" : "Sprawdź moje konto na Github",
-    "linkedin" : "Sprawdź moje konto na LinkedIn"
+    "linkedin" : "Sprawdź moje konto na LinkedIn",
+
+    "about-content" : "Cześć ! Mam na imię Grzegorz i jestem byłym piłkarzem ręcznym, który w końcu znalazł swoją wymarzoną pracę i pasję zarazem. W 2019 rozpocząłem przygodę z programowaniem i od tego czasu stała się moim życiem. Jestem osobą ambitną, upartą, nie bojącą się ciężkiej pracy i lubię sam znajdować rozwiązania dla pojawiających sie komplikacji. Codziennie uczę się czegoś nowego.",
+
+    "basic": "Czuje się dobrze, ale wciaż się uczę:",
+    "good": "Czuję się pewnie",
+    "advanced": "Najsprawniej i najpewniej pracuje mi się w danych technologiach"
 }

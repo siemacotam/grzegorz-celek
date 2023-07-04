@@ -51,11 +51,11 @@ export const Header = (): JSX.Element => {
           <Typography component="h1" variant="h4" fontWeight="bold">
             Celek Grzegorz{' '}
             <Typography component="span" variant="h5">
-              (Grzegorz Celek)
+              (Frontend / Fullstack DEV)
             </Typography>
           </Typography>
           <Typography component="span" variant="subtitle1" color={theme.palette.grey[600]}>
-            ∞ obserwowanych
+            ∞ {t('hours')}
           </Typography>
         </NameContainer>
         <NavContainer>
@@ -67,7 +67,12 @@ export const Header = (): JSX.Element => {
             aria-label="page navigation"
           >
             {sections.map(({ name }) => (
-              <Tab key={name} label={t(name)} data-id={name} />
+              <Tab
+                sx={{ fontWeight: '600', textTransform: 'capitalize', fontSize: '15px' }}
+                key={name}
+                label={t(name)}
+                data-id={name}
+              />
             ))}
           </Tabs>
         </NavContainer>

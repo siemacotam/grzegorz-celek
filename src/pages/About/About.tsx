@@ -1,13 +1,16 @@
 import { Grid, Card, CardContent, Typography, Stack, useTheme } from '@mui/material';
+import { Post } from 'components';
 import { useTranslation } from 'hooks/useTranslation';
+import { useDelay } from 'hooks/useDelay';
 import { aboutList } from './About.const';
 
 export const About = (): JSX.Element => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const { ready } = useDelay(500);
 
   return (
-    <Grid container>
+    <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
         <Card>
           <CardContent>
@@ -26,6 +29,18 @@ export const About = (): JSX.Element => {
             </Stack>
           </CardContent>
         </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack rowGap={2}>
+          <Card>
+            <CardContent>
+              <Typography variant="h6" fontWeight="bold">
+                {t('about-info')}
+              </Typography>
+            </CardContent>
+          </Card>
+          <Post text={t('about-content')} ready={ready} />
+        </Stack>
       </Grid>
     </Grid>
   );
