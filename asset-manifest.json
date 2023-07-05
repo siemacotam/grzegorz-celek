@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/grzegorz-celek/static/css/main.0e8421b6.css",
+    "main.js": "/grzegorz-celek/static/js/main.e2928b05.js",
+    "static/media/mountains.jpg": "/grzegorz-celek/static/media/mountains.b6844e651581a36b81b5.jpg",
+    "static/media/grzesiek_2.jpg": "/grzegorz-celek/static/media/grzesiek_2.1f42cdc56008c3afbfe0.jpg",
+    "static/media/small.jpg": "/grzegorz-celek/static/media/small.0c450b59c8f090612b93.jpg",
+    "index.html": "/grzegorz-celek/index.html",
+    "main.0e8421b6.css.map": "/grzegorz-celek/static/css/main.0e8421b6.css.map",
+    "main.e2928b05.js.map": "/grzegorz-celek/static/js/main.e2928b05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e8421b6.css",
+    "static/js/main.e2928b05.js"
+  ]
+}
