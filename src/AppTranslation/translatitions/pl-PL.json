@@ -36,9 +36,14 @@
     "yuno.description" : "Kontynuacja projektu z bidroom pod nowym zarządem. Międzynarodowy zespół z duzymi partnerami. Celem jest wypuszczenie gotowego produktu do jesieni. Praca dorywcza",
     "yuno.duties" : "nowe funkcjonalności, naprawa błędów, autoryzacja",
 
+    "piu.description" : "Sklep napisany od podstaw, łącznie z systemem CMS. Uzytkownicy mają możliwość utworzenia konta, zakupu (również bez zakładnia konta) zapisania się do newslettera oraz kontaktu ze sklepem. Admin moze dodawać, edytować, usuwać produkty oraz dodawać je do promocji. Strona jest przetłumaczona na jezyk niemiecki, angielski i arabski. Integracja z systemem płatności dotpay.",
+    "portfolio.description" : "Portfolio udostępniające informację o mojej osobie. Daje możliwość zmianę jezyka, kontakt, pobranie CV w formie PDF oraz zmiane trybu na nocny",
+    "gb.description" : "Zautomatyzowane forum bukmacherskie. Użytkownicy mają możliwość podawania swoich typów,dzielenia sie opiniami, obserwowania innych typerów, śledzenia statystyk skuteczności oraz otrzymywania punktów respektu lub 'stawiania piwka' w ramach podziekowania. Admin korzystając z panelu jest w stanie automatycznie rozliczać wydarzenia",
+
     "duration" : "Okres współpracy",
     "position" : "Pozycja",
     "tech" : "Technologie",
-    "about-company" : "O Firmie",
-    "duties" : "Obowiązki"
+    "about-company" : "O projekcie",
+    "duties" : "Obowiązki",
+    "link" : "Link"
 }

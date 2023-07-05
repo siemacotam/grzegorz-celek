@@ -12,7 +12,7 @@ import { SiMui, SiHtml5, SiTypescript, SiJirasoftware, SiNextdotjs, SiJest } fro
 import { BsFiletypeScss } from 'react-icons/bs';
 import { ISkill, Level } from './Skills.types';
 
-const iconsStyle = { fontSize: '30px', color: 'black' };
+const iconsStyle = { fontSize: '30px', color: '#D3D3D3' };
 
 const green = '#50C878';
 const blue = '#0096FF';

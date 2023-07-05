@@ -13,7 +13,6 @@
     "b2" : "B2/C1",
     "native": "Native",
 
-
     "kalisz" : "Kalisz , Greater Poland, Poland",
     "hours" : "hours spent in front of computer",
 
@@ -37,9 +36,14 @@
     "yuno.description" : "Continuation of the bidroom project under new management. An international team with large partners. The goal is to release the finished product by the fall. Odd job",
     "yuno.duties" : "new functionalities, bug fixes, authorization",
 
+    "piu.description" : "The store was written from scratch, including the CMS system. Users have the option of creating an account, purchasing (also without creating an account), subscribing to the newsletter and contacting the store. The admin can add, edit, delete products and add them to the promotion. The site is translated into German, English and Arabic. Integration with the dotpay payment system.",
+    "portfolio.description" : "Portfolio sharing information about me. It gives you the ability to change the language, contact, download your CV in PDF format and change the mode to night mode",
+    "gb.description" : "Automated betting forum. Users have the opportunity to submit their tips, share opinions, follow other tipsters, track performance statistics and receive respect points or 'give beer' as a thank you. Admin using the panel is able to automatically settle events",
+
     "duration" : "Period of cooperation",
     "position" : "Position",
     "tech" : "Tech stack",
-    "about-company" : "About company",
-    "duties" : "Duties"
+    "about-company" : "About project",
+    "duties" : "Duties",
+    "link" : "Link"
 }

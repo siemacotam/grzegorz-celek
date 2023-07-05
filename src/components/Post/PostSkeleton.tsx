@@ -5,7 +5,7 @@ export const PostSkeleton = (): JSX.Element => (
     <CardContent>
       <Stack direction="row" mb={2} spacing={1}>
         <Skeleton variant="circular" width={50} height={50} />
-        <Box width="100%">
+        <Box sx={{ width: 'calc(100% - 50px)' }}>
           <Skeleton variant="text" sx={{ fontSize: '1.2rem' }} />
           <Skeleton variant="text" sx={{ fontSize: '0.9rem' }} />
         </Box>

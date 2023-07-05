@@ -3,6 +3,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PersonIcon from '@mui/icons-material/Person';
 import CodeIcon from '@mui/icons-material/Code';
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import LinkIcon from '@mui/icons-material/Link';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import { Experience } from './Experience';
 
@@ -33,6 +34,11 @@ export const experienceHeaders = (data: Experience, t: Translation) => [
     title: t('duties'),
     icon: <EngineeringIcon style={iconsStyle} />,
     value: data.duties
+  },
+  {
+    title: t('link'),
+    icon: <LinkIcon style={iconsStyle} />,
+    value: data.link
   }
 ];
 
@@ -43,6 +49,7 @@ export interface Experience {
   duties: string;
   description: string;
   position: string;
+  link: string;
 }
 
 export const experience = (t: Translation): Experience[] => [
@@ -52,7 +59,8 @@ export const experience = (t: Translation): Experience[] => [
     tech: 'Vue, Nuxt, Typescript, Vuex',
     duties: t('yuno.duties'),
     description: t('yuno.description'),
-    position: 'Frontend developer'
+    position: 'Frontend developer',
+    link: ''
   },
   {
     label: 'Cargo control',
@@ -60,7 +68,8 @@ export const experience = (t: Translation): Experience[] => [
     tech: 'React, Typescript, NextJs, Node, Express, MongoDB, React Query, React intl',
     duties: t('cc.duties'),
     description: t('cc.description'),
-    position: 'Full stack developer'
+    position: 'Full stack developer',
+    link: ''
   },
   {
     label: 'Bidroom',
@@ -68,6 +77,37 @@ export const experience = (t: Translation): Experience[] => [
     tech: 'React, Typescript, gRPC, AWS',
     duties: t('bidroom.duties'),
     description: t('bidroom.description'),
-    position: 'Software engineer'
+    position: 'Software engineer',
+    link: ''
+  }
+];
+
+export const experienceProjects = (t: Translation): Experience[] => [
+  {
+    label: 'PIU shop',
+    dates: '',
+    tech: 'React, Typescript, Node, Express, MongoDB, React intl',
+    duties: '',
+    description: t('piu.description'),
+    position: '',
+    link: 'https://piu.sklep.pl'
+  },
+  {
+    label: 'Portfolio',
+    dates: '',
+    tech: 'React, Typescript, MUI, React intl',
+    duties: '',
+    description: t('portfolio.description'),
+    position: '',
+    link: 'https://siemacotam.github.io/grzegorz-celek/'
+  },
+  {
+    label: 'Green bet forum',
+    dates: '',
+    tech: 'React, Typescript, Node, Express, MongoDB',
+    duties: '',
+    description: t('gb.description'),
+    position: '',
+    link: 'https://apptobet-production.up.railway.app/forum'
   }
 ];
