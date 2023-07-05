@@ -2,24 +2,18 @@ import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { Slide, Paper, Box, useTheme, IconButton, Typography, Stack } from '@mui/material';
 import { handleChatStatus } from 'store/reducers/mainReducer/mainReducer';
 import CloseIcon from '@mui/icons-material/Close';
+import { useDelay } from 'hooks/useDelay';
+import { useTranslation } from 'hooks/useTranslation';
 import './chat.css';
-import { useEffect, useState } from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import { MessageContainer } from './Chat.styled';
 
 export const Chat = (): JSX.Element => {
-  const [showMsg, setShowMsg] = useState(false);
   const show = useAppSelector((store) => store.main.showChat);
   const dispatch = useAppDispatch();
   const theme = useTheme();
-
-  useEffect(() => {
-    const intervalId = setInterval(() => setShowMsg(true), 2000);
-    return () => {
-      setShowMsg(false);
-      clearInterval(intervalId);
-    };
-  }, [show]);
+  const { ready } = useDelay(2000);
+  const { t } = useTranslation();
 
   return (
     <Box position="fixed" bottom="0px" right="20px">
@@ -43,10 +37,10 @@ export const Chat = (): JSX.Element => {
               <CloseIcon sx={{ color: 'white' }} />
             </IconButton>
           </Stack>
-          {showMsg ? (
+          {ready ? (
             <Stack flexDirection="row" m={2}>
               <MessageContainer>
-                <Typography component="span">Witaj. Jak mogę Ci pomóć ?</Typography>
+                <Typography component="span">{t('chat.hello')}</Typography>
               </MessageContainer>
             </Stack>
           ) : (

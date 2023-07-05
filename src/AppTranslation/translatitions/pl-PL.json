@@ -7,6 +7,11 @@
 
     "presentation" : "Prezentacja",
     "about-info" : "O mnie",
+    "languages" : "Języki",
+    "polish" : "Polski",
+    "english" : "Angielski",
+    "b2" : "B2/C1",
+    "native": "Ojczysty",
 
     "kalisz" : "Kalisz, wielkopolskie, Polska",
     "hours" : "godzin spędzonych przed komputerem",
@@ -18,5 +23,22 @@
 
     "basic": "Czuje się dobrze, ale wciaż się uczę:",
     "good": "Czuję się pewnie",
-    "advanced": "Najsprawniej i najpewniej pracuje mi się w danych technologiach"
+    "advanced": "Najsprawniej i najpewniej pracuje mi się w danych technologiach",
+
+    "chat.hello" : "Witaj. Jak mogę Ci pomóc?",
+
+    "bidroom.description" : "Holenderski start up zatrudniający ponad 70 osób, działający w branzy hotelarskiej. Niestety pod konieć roku z powodu braku funduszy projekt został zamknięty",
+    "bidroom.duties" : "Głównie frontendowe taski, dodawanie i walidacja formularzy, naprawianie błędów, połączenie z gRPC, auth, AWS- pipelines, cognito",
+
+    "cc.description" : "Startup tworzacy system do zarządzania transportem drogowym. Mały team umożliwiał ścisłą współpracę i wspólne modelowanie produktu. Na chwilę obecną zbliża sie termin zakończenia MVP",
+    "cc.duties" : "Tworzenie modelów, API, połączenie FE i BE, tworzenie formularzy, praca na danych, warstwa wizualna aplikacji",
+
+    "yuno.description" : "Kontynuacja projektu z bidroom pod nowym zarządem. Międzynarodowy zespół z duzymi partnerami. Celem jest wypuszczenie gotowego produktu do jesieni. Praca dorywcza",
+    "yuno.duties" : "nowe funkcjonalności, naprawa błędów, autoryzacja",
+
+    "duration" : "Okres współpracy",
+    "position" : "Pozycja",
+    "tech" : "Technologie",
+    "about-company" : "O Firmie",
+    "duties" : "Obowiązki"
 }

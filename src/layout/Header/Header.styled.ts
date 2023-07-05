@@ -22,7 +22,10 @@ export const MainPhoto = styled('div')({
   backgroundSize: 'cover',
   position: 'absolute',
   bottom: `-${imageSize / 2}px`,
-  left: '40px'
+  left: '40px',
+  '@media (max-width: 780px)': {
+    left: `calc(50% - ${imageSize / 2}px)`
+  }
 });
 
 export const BackgroundPhoto = styled('div')({
@@ -34,13 +37,25 @@ export const BackgroundPhoto = styled('div')({
   backgroundImage: `url(${Background})`,
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  '@media (max-width: 780px)': {
+    height: '200px',
+    borderRadius: 0
+  }
 });
 
 export const NameContainer = styled('div')({
   marginLeft: '250px',
   padding: '20px',
-  height: `${imageSize / 2 + 20}px`
+  height: `${imageSize / 2 + 20}px`,
+  '@media (max-width: 780px)': {
+    marginLeft: 0,
+    marginTop: imageSize / 2,
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'center',
+    rowGap: '5px'
+  }
 });
 
 export const NavContainer = styled('div')(({ theme }) => ({

@@ -48,13 +48,13 @@ export const Header = (): JSX.Element => {
           <MainPhoto />
         </BackgroundPhoto>
         <NameContainer>
-          <Typography component="h1" variant="h4" fontWeight="bold">
+          <Typography component="span" variant="h4" fontWeight="bold">
             Celek Grzegorz{' '}
-            <Typography component="span" variant="h5">
-              (Frontend / Fullstack DEV)
-            </Typography>
           </Typography>
-          <Typography component="span" variant="subtitle1" color={theme.palette.grey[600]}>
+          <Typography component="span" variant="h5">
+            (Frontend / Fullstack DEV)
+          </Typography>
+          <Typography component="p" variant="subtitle1" color={theme.palette.grey[600]}>
             ∞ {t('hours')}
           </Typography>
         </NameContainer>

@@ -19,7 +19,12 @@ export const Skills = (): JSX.Element => {
       <Grid container spacing={2}>
         {data.map(({ icon, label }) => (
           <Grid item xs={12} md={6}>
-            <Chip icon={icon} label={label} sx={{ width: '100%', padding: '20px 0' }} />
+            <Chip
+              variant="outlined"
+              icon={icon}
+              label={label}
+              sx={{ width: '100%', padding: '20px 0' }}
+            />
           </Grid>
         ))}
       </Grid>
@@ -27,7 +32,7 @@ export const Skills = (): JSX.Element => {
   };
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} p={{ xs: 1, md: 0 }}>
       <Grid item xs={12}>
         <Card>
           <CardContent>

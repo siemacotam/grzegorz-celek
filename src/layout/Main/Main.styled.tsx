@@ -4,7 +4,8 @@ import { maxContentWidth } from 'layout/Header/Header.styled';
 export const MainContainer = styled('main')(({ theme }) => ({
   borderTop: `2px solid ${theme.palette.grey[300]}`,
   backgroundColor: theme.palette.grey[100],
-  minHeight: '50vh'
+  minHeight: '50vh',
+  paddingBottom: '200px'
 }));
 
 export const MainContentContainer = styled('div')({
