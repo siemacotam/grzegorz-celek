@@ -7,6 +7,12 @@
 
     "presentation" : "Presentation",
     "about-info" : "About me",
+    "languages" : "Languages",
+    "polish" : "Polish",
+    "english" : "English",
+    "b2" : "B2/C1",
+    "native": "Native",
+
 
     "kalisz" : "Kalisz , Greater Poland, Poland",
     "hours" : "hours spent in front of computer",
@@ -18,5 +24,22 @@
 
     "basic": "I feel good but also still learning:",
     "good": "I feel comfortable with:",
-    "advanced": "I am very confident in:"
+    "advanced": "I am very confident in:",
+
+    "chat.hello" : "Hello. How can I help You?",
+
+    "bidroom.description" : "Solid start-up employing over 70 people, operating in the hotel industry. Unfortunately, at the end of the year, due to lack of funds, the project was closed",
+    "bidroom.duties" : "Frontend tasks, adding new forms and validations, fix bugs, connections with gRPC, auth, AWS - pipelines, cognito",
+
+    "cc.description" : "Startup creating a transport management system. A small team enabled close cooperation and joint modeling of the product. At the moment, the deadline for MVP is approaching",
+    "cc.duties" : "Creating models, API, connecting FE and BE, creating forms, working with data, the visual layer of the application",
+
+    "yuno.description" : "Continuation of the bidroom project under new management. An international team with large partners. The goal is to release the finished product by the fall. Odd job",
+    "yuno.duties" : "new functionalities, bug fixes, authorization",
+
+    "duration" : "Period of cooperation",
+    "position" : "Position",
+    "tech" : "Tech stack",
+    "about-company" : "About company",
+    "duties" : "Duties"
 }
