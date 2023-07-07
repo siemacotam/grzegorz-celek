@@ -5,11 +5,20 @@ import CodeIcon from '@mui/icons-material/Code';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LinkIcon from '@mui/icons-material/Link';
 import EngineeringIcon from '@mui/icons-material/Engineering';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import cc from 'images/cc.png';
+import bidroom from 'images/bidroom.png';
+import piu from 'images/piu.png';
 import { Experience } from './Experience';
 
 const iconsStyle = { fontSize: '20px', color: '#D3D3D3' };
 
 export const experienceHeaders = (data: Experience, t: Translation) => [
+  {
+    title: t('company'),
+    icon: <AccountBalanceIcon style={iconsStyle} />,
+    value: data.label
+  },
   {
     title: t('duration'),
     icon: <CalendarMonthIcon style={iconsStyle} />,
@@ -49,7 +58,8 @@ export interface Experience {
   duties: string;
   description: string;
   position: string;
-  link: string;
+  link?: string;
+  logo?: string;
 }
 
 export const experience = (t: Translation): Experience[] => [
@@ -59,8 +69,7 @@ export const experience = (t: Translation): Experience[] => [
     tech: 'Vue, Nuxt, Typescript, Vuex',
     duties: t('yuno.duties'),
     description: t('yuno.description'),
-    position: 'Frontend developer',
-    link: ''
+    position: 'Frontend developer'
   },
   {
     label: 'Cargo control',
@@ -69,7 +78,7 @@ export const experience = (t: Translation): Experience[] => [
     duties: t('cc.duties'),
     description: t('cc.description'),
     position: 'Full stack developer',
-    link: ''
+    logo: cc
   },
   {
     label: 'Bidroom',
@@ -78,7 +87,7 @@ export const experience = (t: Translation): Experience[] => [
     duties: t('bidroom.duties'),
     description: t('bidroom.description'),
     position: 'Software engineer',
-    link: ''
+    logo: bidroom
   }
 ];
 
@@ -90,7 +99,8 @@ export const experienceProjects = (t: Translation): Experience[] => [
     duties: '',
     description: t('piu.description'),
     position: '',
-    link: 'https://piu.sklep.pl'
+    link: 'https://piu.sklep.pl',
+    logo: piu
   },
   {
     label: 'Portfolio',

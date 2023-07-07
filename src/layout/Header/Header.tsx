@@ -1,13 +1,15 @@
-import { Tabs, Tab, Typography, AppBar, Toolbar, Tooltip, useTheme } from '@mui/material';
+import { Tabs, Tab, Typography, AppBar, Toolbar, Tooltip, useTheme, Box } from '@mui/material';
 import { useState, SyntheticEvent } from 'react';
 import { useTranslation } from 'hooks/useTranslation';
 import { Sections, sections } from 'global';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { changeSection } from 'store/reducers/mainReducer/mainReducer';
 import { menuItems } from 'global/const/menu';
+import { ChatButton } from 'components';
 import {
   BackgroundPhoto,
   HeaderContainer,
+  InfoPanelContainer,
   MainPhoto,
   MenuContainer,
   NameContainer,
@@ -47,17 +49,22 @@ export const Header = (): JSX.Element => {
         <BackgroundPhoto>
           <MainPhoto />
         </BackgroundPhoto>
-        <NameContainer>
-          <Typography component="span" variant="h4" fontWeight="bold">
-            Celek Grzegorz{' '}
-          </Typography>
-          <Typography component="span" variant="h5">
-            (Frontend / Fullstack DEV)
-          </Typography>
-          <Typography component="p" variant="subtitle1" color={theme.palette.grey[600]}>
-            ∞ {t('hours')}
-          </Typography>
-        </NameContainer>
+        <InfoPanelContainer>
+          <NameContainer>
+            <Typography component="span" variant="h4" fontWeight="bold">
+              Celek Grzegorz{' '}
+            </Typography>
+            <Typography component="span" variant="h5">
+              (Frontend / Fullstack DEV)
+            </Typography>
+            <Typography component="p" variant="subtitle1" color={theme.palette.grey[600]}>
+              ∞ {t('hours')}
+            </Typography>
+          </NameContainer>
+          <Box sx={{ py: '20px' }}>
+            <ChatButton />
+          </Box>
+        </InfoPanelContainer>
         <NavContainer>
           <Tabs
             onChange={handleChange}

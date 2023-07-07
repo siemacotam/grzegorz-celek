@@ -44,17 +44,27 @@ export const BackgroundPhoto = styled('div')({
   }
 });
 
+export const InfoPanelContainer = styled('div')({
+  display: 'flex',
+  justifyContent: 'space-between',
+  '@media (max-width: 780px)': {
+    flexDirection: 'column',
+    textAlign: 'center',
+    rowGap: '5px'
+  }
+});
+
 export const NameContainer = styled('div')({
   marginLeft: '250px',
   padding: '20px',
-  height: `${imageSize / 2 + 20}px`,
   '@media (max-width: 780px)': {
     marginLeft: 0,
     marginTop: imageSize / 2,
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
-    rowGap: '5px'
+    rowGap: '5px',
+    paddingBottom: 0
   }
 });
 

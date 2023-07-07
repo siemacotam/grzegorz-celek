@@ -40,10 +40,20 @@
     "portfolio.description" : "Portfolio sharing information about me. It gives you the ability to change the language, contact, download your CV in PDF format and change the mode to night mode",
     "gb.description" : "Automated betting forum. Users have the opportunity to submit their tips, share opinions, follow other tipsters, track performance statistics and receive respect points or 'give beer' as a thank you. Admin using the panel is able to automatically settle events",
 
+    "company" : "Company name",
     "duration" : "Period of cooperation",
     "position" : "Position",
     "tech" : "Tech stack",
     "about-company" : "About project",
     "duties" : "Duties",
-    "link" : "Link"
+    "link" : "Link",
+    "message-me" : "Send message",
+    "name" : "Hello. Whats Your name ?",
+    "email" : "Nice to see You. What is Your email adress ?",
+    "message" : "Thanks. Now, You can write message :)",
+    "send" : "Thanks. Are You sure You want to send that email ?",
+    "sent" : "Thanks. Message is sent",
+    "required": "I will not accept empty fields! :)",
+    "fail" : "Ok i understand. Next time :)"
 }
+

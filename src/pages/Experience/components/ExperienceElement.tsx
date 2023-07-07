@@ -1,4 +1,4 @@
-import { Stack, Typography, Link } from '@mui/material';
+import { Stack, Typography, Link, Box } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
 import { Experience, experienceHeaders } from '../Experience.const';
 
@@ -10,10 +10,7 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
   const { t } = useTranslation();
 
   return (
-    <Stack rowGap={1} p={{ xs: 3, md: 5 }}>
-      <Typography mb={2} component="p" variant="h4" fontWeight="bold">
-        {data.label}
-      </Typography>
+    <Stack flexGrow={1} rowGap={1} p={{ xs: 3, md: 5 }} position="relative">
       {experienceHeaders(data, t).map(({ title, icon, value }) =>
         value ? (
           <Stack rowGap={1}>
@@ -31,6 +28,20 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
           </Stack>
         ) : null
       )}
+      <Box
+        position="absolute"
+        height="100%"
+        width="100%"
+        top={0}
+        right={0}
+        sx={{
+          opacity: 0.4,
+          backgroundImage: `url(${data.logo})`,
+          backgroundPosition: 'top 35px right 30px;',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'center'
+        }}
+      />
     </Stack>
   );
 };

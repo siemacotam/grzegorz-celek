@@ -8,9 +8,10 @@ interface PostProps {
   ready: boolean;
   text?: string;
   content?: JSX.Element;
+  date?: string;
 }
 
-export const Post = ({ ready, text, content }: PostProps): JSX.Element => {
+export const Post = ({ ready, text, content, date }: PostProps): JSX.Element => {
   const { d } = useTranslation();
 
   if (!ready) return <PostSkeleton />;
@@ -22,7 +23,7 @@ export const Post = ({ ready, text, content }: PostProps): JSX.Element => {
           <Avatar alt="My avatar" sx={{ width: 50, height: 50 }} src={Image} />
           <Box>
             <Typography fontWeight="bold">Grzegorz Celek</Typography>
-            <Typography variant="caption">{d(new Date())}</Typography>
+            <Typography variant="caption">{date || d(new Date())}</Typography>
           </Box>
         </Stack>
         {text && <StyledText>{text}</StyledText>}
