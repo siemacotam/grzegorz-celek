@@ -15,10 +15,9 @@ import SendIcon from '@mui/icons-material/Send';
 import { useTranslation } from 'hooks/useTranslation';
 import './styles/chat.css';
 import { ChatContainer } from './styles/Chat.styled';
-import { Message } from './components/Message';
 import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
 import { emptyFieldMessage, initialFormValues, pageMessagesList } from './Chat.const';
-import { ChatHeader } from './components/ChatHeader';
+import { ChatHeader, Message } from './components';
 import { formValidation, sendUserMessage } from './Chat.helpers';
 
 export const Chat = (): JSX.Element => {
@@ -32,6 +31,15 @@ export const Chat = (): JSX.Element => {
   const theme = useTheme();
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
+
+  const scrollDown = () => {
+    console.log('in', messagesEndRef);
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView();
+    }
+  };
+
+  scrollDown();
 
   useEffect(() => {
     if (inputRef.current) {
@@ -55,8 +63,6 @@ export const Chat = (): JSX.Element => {
     }
   };
 
-  const scrollDown = () => messagesEndRef.current?.scrollIntoView();
-
   const clearInput = () => {
     if (inputRef.current) {
       inputRef.current.value = '';
@@ -76,6 +82,7 @@ export const Chat = (): JSX.Element => {
       }
       const newMessasge = pageMessagesList(t)[newStep];
       setMessages((prev) => [...prev, newMessasge]);
+
       return;
     }
     setMessages((prev) => [...prev, emptyFieldMessage(t)]);
@@ -106,13 +113,12 @@ export const Chat = (): JSX.Element => {
             <Stack>
               <ChatContainer>
                 {messages.map(({ message, from }) => (
-                  <Message from={from} text={message} scroll={scrollDown} />
+                  <Message from={from} text={message} />
                 ))}
                 {step > 2 && (
                   <Message
                     from={MessageAuthor.page}
                     text={t('send')}
-                    scroll={scrollDown}
                     buttons={
                       <Stack direction="row" justifyContent="space-evenly" py={1}>
                         <Button
@@ -129,12 +135,8 @@ export const Chat = (): JSX.Element => {
                     }
                   />
                 )}
-                {step === 4 && (
-                  <Message from={MessageAuthor.page} text={t('sent')} scroll={scrollDown} />
-                )}
-                {step === 5 && (
-                  <Message from={MessageAuthor.page} text={t('fail')} scroll={scrollDown} />
-                )}
+                {step === 4 && <Message from={MessageAuthor.page} text={t('sent')} />}
+                {step === 5 && <Message from={MessageAuthor.page} text={t('fail')} />}
 
                 <div ref={messagesEndRef} />
               </ChatContainer>

@@ -11,13 +11,13 @@ export const MessageContainer = styled('div')<MessageContainerProps>(({ theme, f
   return {
     padding: '10px 15px',
     backgroundColor: isUser ? theme.palette.primary.main : theme.palette.grey[300],
-    borderRadius: isUser ? '15px 15px 5px 15px' : '15px 15px 15px 5px',
+    borderRadius: isUser ? '15px 15px 2px 15px' : '15px 15px 15px 2px',
     color: isUser ? 'white' : 'black',
     alignSelf: isUser ? 'flex-end' : 'flex-start'
   };
 });
 
-export const Message = styled('span')({});
+export const Message = styled('p')({ wordWrap: 'break-word', maxWidth: '250px', margin: 0 });
 
 export const MessageBackContainer = styled('div')(({ theme }) => ({
   padding: '10px 15px',
