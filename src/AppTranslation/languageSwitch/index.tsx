@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { LanguageContext } from 'AppTranslation/AppTranslation';
 import LanguageIcon from '@mui/icons-material/Language';
 
-export const LanguageSwitch = (): JSX.Element => {
+const LanguageSwitch = (): JSX.Element => {
   const { locale, switchToEn, switchToPl } = useContext(LanguageContext);
   const theme = useTheme();
 
@@ -35,3 +35,5 @@ export const LanguageSwitch = (): JSX.Element => {
     </IconButton>
   );
 };
+
+export default LanguageSwitch;

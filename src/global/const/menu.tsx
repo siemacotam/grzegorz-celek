@@ -1,6 +1,6 @@
 import { Translation } from 'hooks/useTranslation';
 import { ModeSwitch, PDFButton } from 'components';
-import { LanguageSwitch } from 'AppTranslation/LanguageSwitch';
+import LanguageSwitch from 'AppTranslation/languageSwitch';
 
 interface MenuItem {
   label: string;

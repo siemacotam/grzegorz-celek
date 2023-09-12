@@ -55,5 +55,12 @@
     "send" : "Dziekuję. Czy na pewno chcesz wysłać te dane do mnie ?",
     "sent" : "Dziekuję. Wiadomość została wysłana",
     "required": "Nie akceptuje takiej odpowiedzi :)",
-    "fail" : "Szkoda. Daj znać następnym razem"
+    "fail" : "Szkoda. Daj znać następnym razem",
+
+
+    "loader1": "Wczytuje dane ...",
+    "loader2": "Ładuję osiągnięcia ...",
+    "loader3": "Zliczam godziny spędzone przed komputerem ...",
+    "loader4": "Ostatnie dociągnięcia ...",
+    "loader5": "Już prawie jesteśmy !"
 }

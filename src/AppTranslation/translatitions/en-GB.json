@@ -11,7 +11,7 @@
     "languages" : "Languages",
     "polish" : "Polish",
     "english" : "English",
-    "b2" : "B2/C1",
+    "b2" : "B2/C1", 
     "native": "Native",
 
     "kalisz" : "Kalisz , Greater Poland, Poland",
@@ -55,6 +55,12 @@
     "send" : "Thanks. Are You sure You want to send that email ?",
     "sent" : "Thanks. Message is sent",
     "required": "I will not accept empty fields! :)",
-    "fail" : "Ok i understand. Next time :)"
+    "fail" : "Ok i understand. Next time :)",
+
+    "loader1": "Loading the data ...",
+    "loader2": "Loading achievements ...",
+    "loader3": "Counting the hours spent in front of the computer ...",
+    "loader4": "Final touches ...",
+    "loader5": "We're almost there !"
 }
 
