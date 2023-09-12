@@ -25,7 +25,7 @@ export const Experience = (): JSX.Element => {
           <Card>
             <CardContent>
               <Typography component="span" variant="h6" fontWeight="bold">
-                Projekty
+                {t('projects')}
               </Typography>
             </CardContent>
           </Card>

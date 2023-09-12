@@ -66,7 +66,7 @@ export const experience = (t: Translation): Experience[] => [
   {
     label: 'YUNO',
     dates: '05.2023 - ...',
-    tech: 'Vue, Nuxt, Typescript, Vuex',
+    tech: 'Vue, Nuxt, Typescript, Vuex, AWS',
     duties: t('yuno.duties'),
     description: t('yuno.description'),
     position: 'Frontend developer'
