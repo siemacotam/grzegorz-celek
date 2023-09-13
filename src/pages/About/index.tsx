@@ -9,10 +9,13 @@ import { aboutList } from './About.const';
 import { getPics } from './helpers';
 import { Image } from './model';
 import { PostSkeleton } from 'components/Post/PostSkeleton';
+import imagesService from 'services/images.service';
+import { QuoteResponse } from 'services/model';
 
 const About = (): JSX.Element => {
   const [dogs, setDogs] = useState<Image[]>([]);
   const [randoms, setRandoms] = useState<Image[]>([]);
+  const [quotes, setQuotes] = useState<QuoteResponse[]>([]);
 
   const theme = useTheme();
   const { t, d } = useTranslation();
@@ -22,7 +25,9 @@ const About = (): JSX.Element => {
   const getData = async () => {
     const dogsPics = await getPics(true);
     const randomPics = await getPics(false);
+    const quotes = await imagesService.getQuotes();
 
+    setQuotes(quotes);
     setDogs(dogsPics);
     setRandoms(randomPics);
   };
@@ -34,7 +39,13 @@ const About = (): JSX.Element => {
   const postsToShow = (data: Image[], dogs: boolean): JSX.Element[] => {
     return data.map(({ name, src }, index) => (
       <Post
-        text={dogs ? `${t('randomDog')} ${name}` : t('random')}
+        text={
+          dogs
+            ? `${t('randomDog')} ${name}`
+            : quotes.length > index
+            ? `${quotes[index].content} - ${quotes[index].author}`
+            : 'Random comment'
+        }
         date={d(new Date(date.setDate(date.getDate() - index)))}
         content={
           <Box mt={2} textAlign="center" bgcolor={theme.palette.grey[100]}>

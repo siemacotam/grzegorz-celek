@@ -63,6 +63,9 @@
     "loader4": "Final touches ...",
     "loader5": "We're almost there !",
 
-    "randomDog" : "I am adding photo of random dog :) Breed"
+    "randomDog" : "I am adding photo of random dog :) Breed",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share"
 }
 

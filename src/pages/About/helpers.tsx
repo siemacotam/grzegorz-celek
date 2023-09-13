@@ -14,7 +14,7 @@ export const getPics = async (dogs: boolean): Promise<Image[]> => {
   const promises = [];
 
   for (let index = 0; index < 5; index++) {
-    promises.push(dogs ? imagesService.getDog() : imagesService.getRandomPicByCategory());
+    promises.push(dogs ? imagesService.getDog() : imagesService.getRandomPics());
   }
 
   const pics = await Promise.all(promises).then((res) =>
