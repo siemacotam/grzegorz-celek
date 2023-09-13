@@ -1,11 +1,11 @@
 import { Grid, Card, CardContent, Stack, Typography, Chip } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
-import { Post } from 'components';
+import Post from 'components/Post';
 import { icons } from './Skills.const';
 import { ISkill, Level } from './Skills.types';
 
-export const Skills = (): JSX.Element => {
+const Skills = (): JSX.Element => {
   const { t } = useTranslation();
   const { ready } = useDelay(500);
 
@@ -18,7 +18,7 @@ export const Skills = (): JSX.Element => {
     return (
       <Grid container spacing={2}>
         {data.map(({ icon, label }) => (
-          <Grid item xs={12} md={6}>
+          <Grid key={label} item xs={12} md={6}>
             <Chip
               variant="outlined"
               icon={icon}
@@ -43,7 +43,7 @@ export const Skills = (): JSX.Element => {
         </Card>
       </Grid>
       {Object.values(Level).map((value) => (
-        <Grid item xs={12} md={4} rowGap={2}>
+        <Grid key={value} item xs={12} md={4} rowGap={2}>
           <Post
             content={
               <Stack rowGap={2}>
@@ -58,3 +58,5 @@ export const Skills = (): JSX.Element => {
     </Grid>
   );
 };
+
+export default Skills;

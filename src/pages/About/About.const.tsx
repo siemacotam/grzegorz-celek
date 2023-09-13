@@ -1,5 +1,5 @@
 import { Translation } from 'hooks/useTranslation';
-import { Theme, Link } from '@mui/material';
+import { Theme } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -9,8 +9,9 @@ const ghlink = 'https://github.com/siemacotam';
 const inlink = 'https://www.linkedin.com/in/grzegorz-celek-777332202/';
 
 interface AboutListElement {
-  label: string | JSX.Element;
+  label: string;
   icon: JSX.Element;
+  link: string;
 }
 
 export const aboutList = (t: Translation, theme: Theme): AboutListElement[] => {
@@ -19,27 +20,23 @@ export const aboutList = (t: Translation, theme: Theme): AboutListElement[] => {
   return [
     {
       label: t('kalisz'),
-      icon: <LocationOnIcon sx={iconStyles} />
+      icon: <LocationOnIcon sx={iconStyles} />,
+      link: ''
     },
     {
       label: 'g.celek@gmail.com',
-      icon: <AlternateEmailIcon sx={iconStyles} />
+      icon: <AlternateEmailIcon sx={iconStyles} />,
+      link: ''
     },
     {
-      label: (
-        <Link rel="noopener noreferrer" target="_blank" href={ghlink}>
-          {t('github')}
-        </Link>
-      ),
-      icon: <GitHubIcon sx={iconStyles} />
+      label: t('github'),
+      icon: <GitHubIcon sx={iconStyles} />,
+      link: ghlink
     },
     {
-      label: (
-        <Link rel="noopener noreferrer" target="_blank" href={inlink}>
-          {t('linkedin')}
-        </Link>
-      ),
-      icon: <LinkedInIcon sx={iconStyles} />
+      label: t('linkedin'),
+      icon: <LinkedInIcon sx={iconStyles} />,
+      link: inlink
     }
   ];
 };

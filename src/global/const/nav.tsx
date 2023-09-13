@@ -1,5 +1,7 @@
 import { Sections } from 'global/enum';
-import { About, Education, Experience, Skills } from 'pages';
+import { Education, Experience } from 'pages';
+import About from 'pages/About';
+import Skills from 'pages/Skills';
 
 interface SectionObject {
   name: Sections;

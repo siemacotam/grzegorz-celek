@@ -1,7 +1,7 @@
 import { IconButton, Typography, Stack, useTheme } from '@mui/material';
 import { useContext } from 'react';
-import { LanguageContext } from 'AppTranslation/AppTranslation';
 import LanguageIcon from '@mui/icons-material/Language';
+import { LanguageContext } from 'translation/translation';
 
 const LanguageSwitch = (): JSX.Element => {
   const { locale, switchToEn, switchToPl } = useContext(LanguageContext);

@@ -1,5 +1,6 @@
 import { Grid, Stack, Typography, Card, CardContent, Box } from '@mui/material';
-import { Post } from 'components';
+import Post from 'components/Post';
+
 import { useDelay } from 'hooks/useDelay';
 import { useTranslation } from 'hooks/useTranslation';
 import awf from 'images/awf.png';

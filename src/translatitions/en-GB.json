@@ -12,7 +12,7 @@
     "polish" : "Polish",
     "english" : "English",
     "b2" : "B2/C1", 
-    "native": "Native",
+    "native": "Native", 
 
     "kalisz" : "Kalisz , Greater Poland, Poland",
     "hours" : "hours spent in front of computer",
@@ -61,6 +61,8 @@
     "loader2": "Loading achievements ...",
     "loader3": "Counting the hours spent in front of the computer ...",
     "loader4": "Final touches ...",
-    "loader5": "We're almost there !"
+    "loader5": "We're almost there !",
+
+    "randomDog" : "I am adding photo of random dog :) Breed"
 }
 

@@ -3,13 +3,13 @@ import localeData from 'dayjs/plugin/localeData';
 import weekday from 'dayjs/plugin/weekday';
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { RawIntlProvider, createIntlCache, createIntl, IntlShape } from 'react-intl';
-import { Setup, AppTranslationProps } from './AppTranslation.types';
 
 import 'dayjs/locale/en';
 import 'dayjs/locale/pl';
 
-import localDataEN from './translatitions/en-GB.json';
-import localDataPL from './translatitions/pl-PL.json';
+import localDataEN from 'translatitions/en-GB.json';
+import localDataPL from 'translatitions/pl-PL.json';
+import { Setup, AppTranslationProps } from './types';
 
 dayjs.extend(weekday);
 dayjs.extend(localeData);
@@ -57,15 +57,14 @@ export const LanguageContext = createContext<ContextProps>({
 export const IntlProviderWrapper = ({ children }: AppTranslationProps): JSX.Element => {
   const [state, setState] = useState('pl-PL');
 
-  const switchToEn = () => setState('en-GB');
-  const switchToPl = () => setState('pl-PL');
-
   const locale = state;
 
-  const languageContextProps = useMemo(
-    () => ({ locale, switchToEn, switchToPl }),
-    [locale, switchToEn, switchToPl]
-  );
+  const languageContextProps = useMemo(() => {
+    const switchToEn = () => setState('en-GB');
+    const switchToPl = () => setState('pl-PL');
+
+    return { locale, switchToEn, switchToPl };
+  }, [locale]);
 
   return (
     <LanguageContext.Provider value={languageContextProps}>{children}</LanguageContext.Provider>

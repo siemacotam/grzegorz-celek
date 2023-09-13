@@ -1,11 +1,13 @@
-import { Tabs, Tab, Typography, AppBar, Toolbar, Tooltip, useTheme, Box } from '@mui/material';
+import { Tabs, Tab, Typography, AppBar, Toolbar, useTheme, Box } from '@mui/material';
 import { useState, SyntheticEvent } from 'react';
 import { useTranslation } from 'hooks/useTranslation';
 import { Sections, sections } from 'global';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { changeSection } from 'store/reducers/mainReducer/mainReducer';
-import { menuItems } from 'global/const/menu';
-import { ChatButton } from 'components';
+import { ChatButton } from 'components/ChatButton';
+import PDFButton from 'components/PDFButton';
+import ModeSwitch from 'components/modeSwitchButton';
+import LanguageSwitch from 'translation/languageSwitch';
 import {
   BackgroundPhoto,
   HeaderContainer,
@@ -39,9 +41,9 @@ export const Header = (): JSX.Element => {
       <AppBar position="fixed">
         <Toolbar sx={{ bgcolor: 'white' }}>
           <MenuContainer>
-            {menuItems(t).map(({ label, button }) => (
-              <Tooltip title={label}>{button}</Tooltip>
-            ))}
+            <PDFButton />
+            <ModeSwitch />
+            <LanguageSwitch />
           </MenuContainer>
         </Toolbar>
       </AppBar>

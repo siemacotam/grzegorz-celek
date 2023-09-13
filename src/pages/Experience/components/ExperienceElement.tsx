@@ -18,8 +18,14 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
             <Stack direction="row" alignItems="center" spacing={1}>
               {icon}
               {value.includes('https') ? (
-                <Link rel="noopener noreferrer" target="_blank" href={value}>
-                  Link
+                <Link
+                  component="a"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={value}
+                  sx={{ cursor: 'pointer' }}
+                >
+                  Link sad
                 </Link>
               ) : (
                 <Typography>{value}</Typography>
@@ -28,7 +34,7 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
           </Stack>
         ) : null
       )}
-      <Box
+      {/* <Box
         position="absolute"
         height="100%"
         width="100%"
@@ -41,7 +47,7 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'center'
         }}
-      />
+      /> */}
     </Stack>
   );
 };

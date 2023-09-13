@@ -34,6 +34,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-uses-react': 'off',
+    'no-plusplus': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': 0,
     'react/react-in-jsx-scope': 'off',

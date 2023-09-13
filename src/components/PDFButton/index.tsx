@@ -4,7 +4,7 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { CV } from 'components/CV';
 import { useTranslation } from 'hooks/useTranslation';
 
-export const PDFButton = (): JSX.Element => {
+const PDFButton = (): JSX.Element => {
   const theme = useTheme();
   const { t } = useTranslation();
 
@@ -20,3 +20,5 @@ export const PDFButton = (): JSX.Element => {
     </IconButton>
   );
 };
+
+export default PDFButton;

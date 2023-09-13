@@ -5,7 +5,7 @@ import { changeViewMode } from 'store/reducers/viewReducer/viewReducer';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-export const ModeSwitch = (): JSX.Element => {
+const ModeSwitch = (): JSX.Element => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const isDark = useAppSelector((store) => store.view.mode);
@@ -19,3 +19,5 @@ export const ModeSwitch = (): JSX.Element => {
     </IconButton>
   );
 };
+
+export default ModeSwitch;
