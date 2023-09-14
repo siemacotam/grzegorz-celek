@@ -1,14 +1,14 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material';
 import { useMemo } from 'react';
-import { useAppSelector } from './store/hooks';
+import { useAppContext } from 'hooks/useAppContext';
 
 interface MuiThemeProviderProps {
   children: JSX.Element;
 }
 
 export const MuiThemeProvider = ({ children }: MuiThemeProviderProps) => {
-  const mode = useAppSelector((store) => store.view.mode);
+  const { mode } = useAppContext();
 
   const theme = useMemo(
     () =>

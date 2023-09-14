@@ -9,7 +9,6 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import cc from 'images/cc.png';
 import bidroom from 'images/bidroom.png';
 import piu from 'images/piu.png';
-import { Experience } from './Experience';
 
 const iconsStyle = { fontSize: '20px', color: '#D3D3D3' };
 

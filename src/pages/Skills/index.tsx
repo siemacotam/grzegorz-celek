@@ -18,7 +18,7 @@ const Skills = (): JSX.Element => {
     return (
       <Grid container spacing={2}>
         {data.map(({ icon, label }) => (
-          <Grid key={label} item xs={12} md={6}>
+          <Grid key={label} item xs={12} md={3}>
             <Chip
               variant="outlined"
               icon={icon}
@@ -32,7 +32,7 @@ const Skills = (): JSX.Element => {
   };
 
   return (
-    <Grid container spacing={2} p={{ xs: 1, md: 0 }}>
+    <Grid container spacing={2} p={{ xs: 1, md: 0 }} maxWidth="900px">
       <Grid item xs={12}>
         <Card>
           <CardContent>
@@ -43,7 +43,7 @@ const Skills = (): JSX.Element => {
         </Card>
       </Grid>
       {Object.values(Level).map((value) => (
-        <Grid key={value} item xs={12} md={4} rowGap={2}>
+        <Grid key={value} item xs={12} rowGap={2}>
           <Post
             content={
               <Stack rowGap={2}>

@@ -25,7 +25,7 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
                   href={value}
                   sx={{ cursor: 'pointer' }}
                 >
-                  Link sad
+                  Link
                 </Link>
               ) : (
                 <Typography>{value}</Typography>

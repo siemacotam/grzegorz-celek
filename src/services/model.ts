@@ -1,8 +1,4 @@
-export interface DogResponse {
-  message: string;
-}
-
-export interface QuoteResponse {
+export interface Quote {
   author: string;
   content: string;
 }

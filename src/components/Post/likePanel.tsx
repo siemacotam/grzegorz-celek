@@ -68,8 +68,11 @@ export const LikePanel = (): JSX.Element => {
         <Grid item xs={4}>
           <Button
             startIcon={<ChatBubbleOutlineRoundedIcon />}
-            sx={{ width: '100%', textTransform: 'capitalize' }}
-            disabled
+            sx={{
+              width: '100%',
+              textTransform: 'capitalize',
+              color: theme.palette.grey[500]
+            }}
           >
             {t('comment')}
           </Button>
@@ -77,8 +80,11 @@ export const LikePanel = (): JSX.Element => {
         <Grid item xs={4}>
           <Button
             startIcon={<ReplyIcon />}
-            sx={{ width: '100%', textTransform: 'capitalize' }}
-            disabled
+            sx={{
+              width: '100%',
+              textTransform: 'capitalize',
+              color: theme.palette.grey[500]
+            }}
           >
             {t('share')}
           </Button>

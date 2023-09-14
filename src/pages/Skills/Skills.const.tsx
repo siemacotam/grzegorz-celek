@@ -6,7 +6,8 @@ import {
   BiLogoNodejs,
   BiLogoMongodb,
   BiLogoCss3,
-  BiLogoJavascript
+  BiLogoJavascript,
+  BiLogoRedux
 } from 'react-icons/bi';
 import { SiMui, SiHtml5, SiTypescript, SiJirasoftware, SiNextdotjs, SiJest } from 'react-icons/si';
 import { BsFiletypeScss } from 'react-icons/bs';
@@ -94,5 +95,10 @@ export const icons: ISkill[] = [
     icon: <BiLogoVuejs style={{ ...iconsStyle, color: green }} />,
     label: 'Vue',
     level: Level.BASIC
+  },
+  {
+    icon: <BiLogoRedux style={{ ...iconsStyle, color: blue }} />,
+    label: 'Redux/toolkit',
+    level: Level.ADVANCED
   }
 ];

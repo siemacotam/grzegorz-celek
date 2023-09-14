@@ -7,7 +7,7 @@ export const Experience = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <Grid container spacing={2} p={{ xs: 1, md: 0 }}>
+    <Grid container spacing={2} p={{ xs: 1, md: 0 }} maxWidth="900px">
       <Grid item xs={12}>
         <Stack rowGap={2}>
           <Card>

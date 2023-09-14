@@ -1,9 +1,8 @@
 import { Tabs, Tab, Typography, AppBar, Toolbar, useTheme, Box } from '@mui/material';
 import { useState, SyntheticEvent } from 'react';
 import { useTranslation } from 'hooks/useTranslation';
+import { useAppContext } from 'hooks/useAppContext';
 import { Sections, sections } from 'global';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { changeSection } from 'store/reducers/mainReducer/mainReducer';
 import { ChatButton } from 'components/ChatButton';
 import PDFButton from 'components/PDFButton';
 import ModeSwitch from 'components/modeSwitchButton';
@@ -21,16 +20,15 @@ import {
 export const Header = (): JSX.Element => {
   const [value, setValue] = useState(0);
   const { t } = useTranslation();
-  const dispatch = useAppDispatch();
   const theme = useTheme();
 
-  const activeSection = useAppSelector((store) => store.main.activeSection);
+  const { activeSection, changeSection } = useAppContext();
 
   const handleChange = (e: SyntheticEvent, newValue: number) => {
     const pickedSection = (e.target as HTMLInputElement).getAttribute('data-id');
 
     if (pickedSection && pickedSection !== activeSection) {
-      dispatch(changeSection(pickedSection as Sections));
+      changeSection(pickedSection as Sections);
     }
 
     setValue(newValue);

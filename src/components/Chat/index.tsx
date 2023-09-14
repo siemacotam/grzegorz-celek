@@ -1,5 +1,4 @@
 import { useRef, useState, ChangeEvent, MutableRefObject, KeyboardEvent, useEffect } from 'react';
-import { useAppSelector } from 'store/hooks';
 import {
   Slide,
   Paper,
@@ -14,6 +13,7 @@ import {
 import SendIcon from '@mui/icons-material/Send';
 import { useTranslation } from 'hooks/useTranslation';
 import './styles/chat.css';
+import { useAppContext } from 'hooks/useAppContext';
 import { ChatContainer } from './styles/Chat.styled';
 import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
 import { emptyFieldMessage, initialFormValues, pageMessagesList } from './Chat.const';
@@ -23,7 +23,7 @@ import { formValidation, sendUserMessage } from './Chat.helpers';
 export const Chat = (): JSX.Element => {
   const { t } = useTranslation();
 
-  const show = useAppSelector((store) => store.main.showChat);
+  const { showChat } = useAppContext();
   const [step, setStep] = useState(0);
   const [messages, setMessages] = useState<MessageProps[]>([pageMessagesList(t)[step]]);
   const [form, setFormValues] = useState<FormValues>(initialFormValues);
@@ -33,7 +33,6 @@ export const Chat = (): JSX.Element => {
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
 
   const scrollDown = () => {
-    console.log('in', messagesEndRef);
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView();
     }
@@ -96,7 +95,7 @@ export const Chat = (): JSX.Element => {
 
   return (
     <Box position="fixed" bottom="0px" right="20px">
-      <Slide direction="up" in={show} mountOnEnter unmountOnExit>
+      <Slide direction="up" in={showChat} mountOnEnter unmountOnExit>
         <Paper
           sx={{
             height: '450px',

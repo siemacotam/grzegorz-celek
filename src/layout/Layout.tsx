@@ -1,20 +1,20 @@
 import { CssBaseline } from '@mui/material';
-import { useAppSelector } from 'store/hooks';
 import { Chat } from 'components/Chat';
+import { useAppContext } from 'hooks/useAppContext';
 import { Header } from './Header/Header';
 import { Main } from './Main/Main';
 import { AppContainer } from './Layout.styled';
 import { Footer } from './Footer/Footer';
 
 export const Layout = (): JSX.Element => {
-  const isChatOpen = useAppSelector((store) => store.main.showChat);
+  const showChat = useAppContext();
 
   return (
     <AppContainer id="top">
       <CssBaseline />
       <Header />
       <Main />
-      {isChatOpen && <Chat />}
+      {showChat && <Chat />}
       <Footer />
     </AppContainer>
   );

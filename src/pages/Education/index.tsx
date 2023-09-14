@@ -1,6 +1,5 @@
 import { Grid, Stack, Typography, Card, CardContent, Box } from '@mui/material';
 import Post from 'components/Post';
-
 import { useDelay } from 'hooks/useDelay';
 import { useTranslation } from 'hooks/useTranslation';
 import awf from 'images/awf.png';
@@ -11,8 +10,8 @@ export const Education = (): JSX.Element => {
   const second = useDelay(2000);
 
   return (
-    <Grid container spacing={2} p={{ xs: 1, md: 0 }}>
-      <Grid item xs={12} md={6}>
+    <Grid container spacing={2} p={{ xs: 1, md: 0 }} maxWidth="900px">
+      <Grid item xs={12}>
         <Stack rowGap={2}>
           <Card>
             <CardContent>
@@ -33,14 +32,13 @@ export const Education = (): JSX.Element => {
                   <Typography>AWF WROCŁAW</Typography>
                   <Typography>Wychowanie fizyczne</Typography>
                   <Typography>Sport</Typography>
-                  <Typography>Sport</Typography>
                 </Stack>
               </Stack>
             }
           />
         </Stack>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12}>
         <Stack rowGap={2}>
           <Card>
             <CardContent>

@@ -1,11 +1,10 @@
 import { IconButton, Typography, Stack, useTheme } from '@mui/material';
-import { handleChatStatus } from 'store/reducers/mainReducer/mainReducer';
 import CloseIcon from '@mui/icons-material/Close';
 import CircleIcon from '@mui/icons-material/Circle';
-import { useAppDispatch } from 'store/hooks';
+import { useAppContext } from 'hooks/useAppContext';
 
 export const ChatHeader = (): JSX.Element => {
-  const dispatch = useAppDispatch();
+  const { handleChatStatus } = useAppContext();
   const theme = useTheme();
 
   return (
@@ -24,7 +23,7 @@ export const ChatHeader = (): JSX.Element => {
         </Typography>
       </Stack>
 
-      <IconButton onClick={() => dispatch(handleChatStatus(false))}>
+      <IconButton onClick={() => handleChatStatus(false)}>
         <CloseIcon sx={{ color: 'white' }} />
       </IconButton>
     </Stack>

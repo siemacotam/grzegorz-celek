@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { AppContextProvider } from 'context/AppContext';
 import { App } from './app';
 import { MuiThemeProvider } from './MuiThemeProvider';
-import { store } from './store/store';
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <MuiThemeProvider>
-        <App />
-      </MuiThemeProvider>
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <AppContextProvider>
+        <MuiThemeProvider>
+          <App />
+        </MuiThemeProvider>
+      </AppContextProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
