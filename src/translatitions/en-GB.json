@@ -5,6 +5,7 @@
     "experience" : "Experience",
     "education" : "Education",
     "projects" : "Projects",
+    "job": "Jobs",
 
     "presentation" : "Presentation",
     "about-info" : "About me",
@@ -28,19 +29,14 @@
 
     "chat.hello" : "Hello. How can I help You?",
 
-    "bidroom.description" : "Solid start-up employing over 70 people, operating in the hotel industry. Unfortunately, at the end of the year, due to lack of funds, the project was closed",
-    "bidroom.duties" : "Frontend tasks, adding new forms and validations, fix bugs, connections with gRPC, auth, AWS - pipelines, cognito",
+    "yuno.description" : "A Dutch start-up related to the hotel industry, employing over 70 people. For less than a year, I worked on a support application written in microfronts - consisting of, among others, an application enabling the management of hotels, users, statistics, channel managers and reservations. After a short break caused by the company's financial problems, we resumed work and went into production. Since then, I have been working on the home page and its configuration for white-label solutions",
+    "yuno.duties" : "Frontend, integration with Cognito, bug fixes, redesign, new functionalities",
 
-    "cc.description" : "Startup creating a transport management system. A small team enabled close cooperation and joint modeling of the product. At the moment, the deadline for MVP is approaching",
-    "cc.duties" : "Creating models, API, connecting FE and BE, creating forms, working with data, the visual layer of the application",
-
-    "yuno.description" : "Continuation of the bidroom project under new management. An international team with large partners. The goal is to release the finished product by the fall. Odd job",
-    "yuno.duties" : "new functionalities, bug fixes, authorization",
-
-    "piu.description" : "The store was written from scratch, including the CMS system. Users have the option of creating an account, purchasing (also without creating an account), subscribing to the newsletter and contacting the store. The admin can add, edit, delete products and add them to the promotion. The site is translated into German, English and Arabic. Integration with the dotpay payment system.",
-    "portfolio.description" : "Portfolio sharing information about me. It gives you the ability to change the language, contact, download your CV in PDF format and change the mode to night mode",
-    "gb.description" : "Automated betting forum. Users have the opportunity to submit their tips, share opinions, follow other tipsters, track performance statistics and receive respect points or 'give beer' as a thank you. Admin using the panel is able to automatically settle events",
-
+    "piu.description" : "Online store with dresses and jewelry, with a CMS system. The application is integrated with Dotpay payments and available in 3 language versions.",
+    "portfolio.description" : "Portfolio providing information about me. It allows you to change the language, contact details, download your CV in PDF format and change the mode to night mode",
+    "muha.description" : "Portal with job offers for our guests from Ukraine. The portal allows you to add employers/agencies and job offers and express opinions about them. In addition to the website, the entire CMS system was also coded. The portal is not operational yet - the production date is very close",
+    "carbook.description" : "Portal with cars for long-term rental. In addition to the home page, a cms system was also created to manage cars and additional packages",
+    
     "company" : "Company name",
     "duration" : "Period of cooperation",
     "position" : "Position",

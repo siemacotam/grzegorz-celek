@@ -1,7 +1,7 @@
 import { Card, Grid, CardContent, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
-import { experience, experienceProjects } from './Experience.const';
-import { TabsContainer } from './components';
+import { experience, experienceProjects } from './const';
+import { TabsContainer } from './components/tabs-container';
 
 export const Experience = (): JSX.Element => {
   const { t } = useTranslation();
@@ -13,11 +13,11 @@ export const Experience = (): JSX.Element => {
           <Card>
             <CardContent>
               <Typography component="span" variant="h6" fontWeight="bold">
-                Praca
+                {t('job')}
               </Typography>
             </CardContent>
           </Card>
-          <TabsContainer elements={experience(t)} />
+          <TabsContainer elements={experience} />
         </Stack>
       </Grid>
       <Grid item xs={12}>
@@ -29,7 +29,7 @@ export const Experience = (): JSX.Element => {
               </Typography>
             </CardContent>
           </Card>
-          <TabsContainer elements={experienceProjects(t)} />
+          <TabsContainer elements={experienceProjects} />
         </Stack>
       </Grid>
     </Grid>

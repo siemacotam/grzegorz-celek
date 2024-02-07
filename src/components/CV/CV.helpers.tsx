@@ -1,5 +1,5 @@
 import { Translation } from 'hooks/useTranslation';
-import { Experience, experience, experienceProjects } from 'pages/Experience/Experience.const';
+import { Experience, experience, experienceProjects } from 'pages/experience/const';
 
 export const cvProps = (t: Translation) => ({
   headers: {
@@ -9,8 +9,8 @@ export const cvProps = (t: Translation) => ({
   },
   text: {
     about: t('about-content'),
-    experience: experience(t),
-    projects: experienceProjects(t)
+    experience,
+    projects: experienceProjects
   },
   subheaders: {
     stack: t('tech'),

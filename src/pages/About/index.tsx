@@ -4,8 +4,7 @@ import Post from 'components/Post';
 import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
 import LanguageIcon from '@mui/icons-material/Language';
-import { aboutList } from './About.const';
-import { RandomPosts } from './components/posts';
+import { aboutList } from 'pages/about/const';
 
 const About = (): JSX.Element => {
   const theme = useTheme();
@@ -36,7 +35,7 @@ const About = (): JSX.Element => {
                     {t('presentation')}
                   </Typography>
                   <Stack rowGap={2} mt={2}>
-                    {aboutList(t, theme).map(({ label, icon, link }, index) => {
+                    {aboutList.map(({ label, icon, link }, index) => {
                       return (
                         <Stack
                           key={`label${index + 1}`}
@@ -47,11 +46,11 @@ const About = (): JSX.Element => {
                           {icon}
                           {link ? (
                             <Link rel="noopener noreferrer" target="_blank" href={link}>
-                              {label}
+                              {t(label)}
                             </Link>
                           ) : (
                             <Typography component="span" variant="subtitle1" fontWeight="400">
-                              {label}
+                              {t(label)}
                             </Typography>
                           )}
                         </Stack>
@@ -83,7 +82,6 @@ const About = (): JSX.Element => {
           </Card>
         </Stack>
       </Grid>
-      <RandomPosts />
     </Grid>
   );
 };

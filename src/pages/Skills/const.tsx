@@ -35,14 +35,14 @@ export const getSkillsList = (skills: ISkill[]): JSX.Element => {
           variant="outlined"
           icon={icon}
           label={label}
-          sx={{ padding: '18px', mr: '10px' }}
+          sx={{ padding: '16px 10px', mr: '10px' }}
         />
       ))}
     </Stack>
   );
 };
 
-const iconsStyle = { fontSize: '30px', color: '#D3D3D3' };
+const iconsStyle = { fontSize: '24px', color: '#D3D3D3' };
 
 const green = '#50C878';
 const blue = '#0096FF';
@@ -59,6 +59,10 @@ export const mainSkills: ISkill[] = [
     label: 'React'
   },
   {
+    icon: <BiLogoVuejs style={{ ...iconsStyle, color: green }} />,
+    label: 'Vue'
+  },
+  {
     icon: <SiTypescript style={{ ...iconsStyle, color: blue }} />,
     label: 'Typescript'
   },
@@ -69,10 +73,6 @@ export const mainSkills: ISkill[] = [
   {
     icon: <BiLogoAws style={iconsStyle} />,
     label: 'AWS'
-  },
-  {
-    icon: <BiLogoVuejs style={{ ...iconsStyle, color: green }} />,
-    label: 'Vue'
   },
   {
     icon: <BiLogoNodejs style={iconsStyle} />,

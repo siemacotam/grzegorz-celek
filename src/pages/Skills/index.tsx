@@ -3,6 +3,7 @@ import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
 import Post from 'components/Post';
 import { additionalSkills, getSkillsList, mainSkills, secondarySkills } from './const';
+import { StyledText } from './styled';
 
 const Skills = (): JSX.Element => {
   const { t } = useTranslation();
@@ -22,12 +23,12 @@ const Skills = (): JSX.Element => {
       <Grid item xs={12} rowGap={2}>
         <Post
           content={
-            <Stack rowGap={2}>
-              <Typography>{t('advanced')}</Typography>
+            <Stack rowGap={4} my={4}>
+              <StyledText variant="body1">{t('advanced')}</StyledText>
               {getSkillsList(mainSkills)}
-              <Typography>{t('good')}</Typography>
+              <StyledText variant="body1">{t('good')}</StyledText>
               {getSkillsList(secondarySkills)}
-              <Typography>{t('basic')}</Typography>
+              <StyledText variant="body1">{t('basic')}</StyledText>
               {getSkillsList(additionalSkills)}
             </Stack>
           }

@@ -1,7 +1,7 @@
 import { useState, SyntheticEvent } from 'react';
 import { Tabs, Tab, Grid, Card, useMediaQuery, useTheme } from '@mui/material';
-import { Experience } from '../Experience.const';
-import { ExperienceElement } from './ExperienceElement';
+import { Experience } from '../const';
+import { ExperienceElement } from './experience-element';
 
 interface TabsContainerProps {
   elements: Experience[];

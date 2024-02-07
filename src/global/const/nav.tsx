@@ -1,5 +1,6 @@
 import { Sections } from 'global/enum';
-import About from 'pages/About';
+import About from 'pages/about';
+import { Experience } from 'pages/experience';
 import Skills from 'pages/skills';
 
 interface SectionObject {
@@ -15,11 +16,11 @@ export const sections: SectionObject[] = [
   {
     name: Sections.SKILLS,
     component: <Skills />
+  },
+  {
+    name: Sections.EXPERIENCE,
+    component: <Experience />
   }
-  // {
-  //   name: Sections.EXPERIENCE,
-  //   component: <Experience />
-  // },
   // {
   //   name: Sections.EDUCATION,
   //   component: <Education />
