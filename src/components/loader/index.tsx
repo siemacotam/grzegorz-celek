@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { LinearProgress, Backdrop, Box, Typography } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
 import { getLabel } from './const';
@@ -8,21 +8,41 @@ const Loader = (): JSX.Element => {
   const [progress, setProgress] = useState(0);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (progress >= 100) {
-        clearInterval(timer);
-      }
-      setProgress((oldProgress) => {
-        const diff = Math.random() * 10;
-        return Math.min(oldProgress + diff, 100);
-      });
-    }, 400);
+  const intervalRef: { current: NodeJS.Timeout | null } = useRef(null);
 
-    return () => {
-      clearInterval(timer);
-    };
+  useEffect(() => {
+    if (progress >= 100) {
+      clearInterval(intervalRef.current as NodeJS.Timeout);
+    }
   }, [progress]);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setProgress((prevProgress) => {
+        const diff = Math.random() * 10;
+        return Math.min(prevProgress + diff, 100);
+      });
+    }, 200);
+    return () => clearInterval(intervalRef.current as NodeJS.Timeout);
+  }, []);
+
+  console.log(progress);
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     if (progress >= 100) {
+  //       clearInterval(timer);
+  //     }
+  //     setProgress((oldProgress) => {
+  //       const diff = Math.random() * 10;
+  //       return Math.min(oldProgress + diff, 100);
+  //     });
+  //   }, 400);
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, [progress]);
 
   if (progress >= 100) return <div />;
 
