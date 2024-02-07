@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/grzegorz-celek/static/css/main.c2a26075.css",
-    "main.js": "/grzegorz-celek/static/js/main.b30db325.js",
+    "main.js": "/grzegorz-celek/static/js/main.5ae6ba8b.js",
     "static/media/mountains.jpg": "/grzegorz-celek/static/media/mountains.b6844e651581a36b81b5.jpg",
     "static/media/yuno.png": "/grzegorz-celek/static/media/yuno.a7eb09f17f402e5c81c9.png",
     "static/media/portfolio.png": "/grzegorz-celek/static/media/portfolio.9bf2b7ba91ada7ef8ff4.png",
@@ -10,10 +10,10 @@
     "static/media/small.jpg": "/grzegorz-celek/static/media/small.0c450b59c8f090612b93.jpg",
     "index.html": "/grzegorz-celek/index.html",
     "main.c2a26075.css.map": "/grzegorz-celek/static/css/main.c2a26075.css.map",
-    "main.b30db325.js.map": "/grzegorz-celek/static/js/main.b30db325.js.map"
+    "main.5ae6ba8b.js.map": "/grzegorz-celek/static/js/main.5ae6ba8b.js.map"
   },
   "entrypoints": [
     "static/css/main.c2a26075.css",
-    "static/js/main.b30db325.js"
+    "static/js/main.5ae6ba8b.js"
   ]
 }
