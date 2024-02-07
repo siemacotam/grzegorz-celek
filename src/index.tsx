@@ -5,7 +5,13 @@ import { AppContextProvider } from 'context/AppContext';
 import { App } from './app';
 import { MuiThemeProvider } from './MuiThemeProvider';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false
+    }
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

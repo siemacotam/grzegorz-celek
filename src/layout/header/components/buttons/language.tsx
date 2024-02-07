@@ -1,11 +1,11 @@
-import { IconButton, Typography, Stack, useTheme } from '@mui/material';
+import { Typography, Stack } from '@mui/material';
 import { useContext } from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
-import { LanguageContext } from 'translation/translation';
+import { LanguageContext } from 'translation';
+import { StyledButton } from './styled';
 
 const LanguageSwitch = (): JSX.Element => {
   const { locale, switchToEn, switchToPl } = useContext(LanguageContext);
-  const theme = useTheme();
 
   const options = [
     {
@@ -19,8 +19,7 @@ const LanguageSwitch = (): JSX.Element => {
   ];
 
   return (
-    <IconButton
-      sx={{ color: theme.palette.primary.main }}
+    <StyledButton
       onClick={() => {
         if (locale === 'pl-PL') options.find((el) => el.label === 'EN')?.fn();
         if (locale === 'en-GB') options.find((el) => el.label === 'PL')?.fn();
@@ -32,7 +31,7 @@ const LanguageSwitch = (): JSX.Element => {
           {locale.substring(0, 2).toUpperCase()}
         </Typography>
       </Stack>
-    </IconButton>
+    </StyledButton>
   );
 };
 

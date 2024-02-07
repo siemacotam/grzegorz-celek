@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import { maxContentWidth } from 'layout/Header/Header.styled';
+import { maxContentWidth } from 'layout/header/styled';
 
 export const MainContainer = styled('main')(({ theme }) => ({
   borderTop: `2px solid ${theme.palette.grey[300]}`,

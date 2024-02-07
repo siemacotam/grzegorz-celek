@@ -13,7 +13,7 @@ export const RandomPosts = (): JSX.Element => {
   useEffect(() => {
     const list = getPostsList(quotes, images, d);
     setPosts(list);
-  }, [d, images, quotes]);
+  }, []);
 
   return (
     <>

@@ -1,5 +1,5 @@
-import { Button } from '@mui/material';
-import MessageIcon from '@mui/icons-material/Message';
+import { Button, Typography } from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'hooks/useTranslation';
 import { useAppContext } from 'hooks/useAppContext';
 
@@ -9,12 +9,12 @@ export const ChatButton = (): JSX.Element => {
 
   return (
     <Button
-      sx={{ fontWeight: '600', textTransform: 'capitalize' }}
-      startIcon={<MessageIcon sx={{ color: 'white', fontSize: '20px' }} />}
+      sx={{ textTransform: 'capitalize' }}
+      startIcon={<EmailIcon sx={{ color: 'white', fontSize: '16px' }} />}
       variant="contained"
       onClick={() => handleChatStatus(true)}
     >
-      {t('message-me')}
+      <Typography letterSpacing={0.5}> {t('message-me')}</Typography>
     </Button>
   );
 };

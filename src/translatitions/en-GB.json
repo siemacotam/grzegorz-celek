@@ -66,6 +66,9 @@
     "randomDog" : "I am adding photo of random dog :) Breed",
     "like": "Like",
     "comment": "Comment",
-    "share": "Share"
+    "share": "Share",
+    "error" : "Ups something went wrong. Please try again later",
+
+    "fallow" : "Fallow me"
 }
 

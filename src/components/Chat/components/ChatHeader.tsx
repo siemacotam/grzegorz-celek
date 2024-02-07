@@ -15,6 +15,10 @@ export const ChatHeader = (): JSX.Element => {
       bgcolor={theme.palette.primary.main}
       pl={1}
       height="40px"
+      sx={{
+        borderTopRightRadius: 5,
+        borderTopLeftRadius: 5
+      }}
     >
       <Stack direction="row" alignItems="center" spacing={1}>
         <CircleIcon sx={{ fontSize: '16px', color: theme.palette.success.light }} />

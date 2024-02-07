@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Box, Avatar, Stack, Typography } from '@mui/material';
 import Image from 'images/small.jpg';
 import { useDelay } from 'hooks/useDelay';
@@ -14,6 +15,14 @@ export const Message = ({ from, text, buttons }: MessageProps): JSX.Element => {
   const { ready } = useDelay(1000);
   const isGuest = from === MessageAuthor.user;
 
+  useEffect(() => {
+    const anchor = document.querySelector('#chatEnd');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+  }, [ready]);
+
   if (from === MessageAuthor.page) {
     if (!ready)
       return (
@@ -22,6 +31,7 @@ export const Message = ({ from, text, buttons }: MessageProps): JSX.Element => {
         </Box>
       );
   }
+
   return (
     <Stack
       direction="row"

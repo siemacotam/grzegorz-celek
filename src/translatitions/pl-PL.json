@@ -67,5 +67,8 @@
     "randomDog" : "Dodaje zdjęcie przykładowego psa którego zobaczyłem. Rasa ",
     "like": "Lubie to",
     "comment": "Komentarz",
-    "share": "Wyślij"
+    "share": "Wyślij",
+    "error" : "Ups coś poszło nie tak, Spróbuj pownownie później",
+
+    "fallow" : "Moje social media"
 }

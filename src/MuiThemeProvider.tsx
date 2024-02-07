@@ -23,13 +23,14 @@ export const MuiThemeProvider = ({ children }: MuiThemeProviderProps) => {
           },
           secondary: {
             light: '#fffbf8',
-            main: '#fff4eb',
+            main: '#E4E6EB',
             dark: '#fdd9bc',
             contrastText: '#FA8220'
           }
         },
         typography: {
-          fontFamily: '"Oswald","Roboto", "Helvetica", "Arial", sans-serif !important'
+          fontFamily:
+            '"Segoe UI Historic", "Segoe UI","Roboto", "Helvetica", "Arial", sans-serif !important'
         },
         components: {
           MuiCardContent: {

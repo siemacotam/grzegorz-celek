@@ -3,28 +3,32 @@ import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
 export const formValidation = (step: number, form: FormValues): boolean => {
   switch (step) {
     case 0:
-      if (form.name === '') return false;
-      return true;
+      return form.name !== '';
     case 1:
-      if (form.email === '') return false;
-      return true;
+      return form.email !== '';
     case 2:
-      if (form.content === '') return false;
-      return true;
+      return form.content !== '';
     default:
       return true;
   }
 };
 
 export const sendUserMessage = (step: number, form: FormValues): MessageProps => {
+  const userMessage: MessageProps = { message: '', from: MessageAuthor.user };
+
   switch (step) {
     case 0:
-      return { message: form.name, from: MessageAuthor.user };
+      userMessage.message = form.name;
+      break;
     case 1:
-      return { message: form.email, from: MessageAuthor.user };
+      userMessage.message = form.email;
+      break;
     case 2:
-      return { message: form.content, from: MessageAuthor.user };
+      userMessage.message = form.content;
+      break;
     default:
-      return { message: '', from: MessageAuthor.user };
+      break;
   }
+
+  return userMessage;
 };

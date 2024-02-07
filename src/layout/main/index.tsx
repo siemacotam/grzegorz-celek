@@ -1,7 +1,7 @@
 import { sections } from 'global';
 import { Stack } from '@mui/material';
 import { useAppContext } from 'hooks/useAppContext';
-import { MainContainer, MainContentContainer } from './Main.styled';
+import { MainContainer, MainContentContainer } from './styled';
 
 export const Main = (): JSX.Element => {
   const { activeSection } = useAppContext();

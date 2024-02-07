@@ -3,7 +3,7 @@ import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
 import Post from 'components/Post';
 import { icons } from './Skills.const';
-import { ISkill, Level } from './Skills.types';
+import { ISkill, Level } from './types';
 
 const Skills = (): JSX.Element => {
   const { t } = useTranslation();
@@ -16,18 +16,21 @@ const Skills = (): JSX.Element => {
     const data = filterSkillsByLevel(skillLevel);
 
     return (
-      <Grid container spacing={2}>
-        {data.map(({ icon, label }) => (
-          <Grid key={label} item xs={12} md={3}>
-            <Chip
-              variant="outlined"
-              icon={icon}
-              label={label}
-              sx={{ width: '100%', padding: '20px 0' }}
-            />
-          </Grid>
+      <Stack direction="row" flexWrap="wrap">
+        {data.map(({ icon, label, tier }) => (
+          <Stack direction="row" key="label" alignItems="center" mr={3} gap={1}>
+            {icon} {label},
+          </Stack>
+          // <Grid key={label} item xs={12} md={3}>
+          //   <Chip
+          //     variant="outlined"
+          //     icon={icon}
+          //     label={label}
+          //     sx={{ width: '100%', padding: '20px 0' }}
+          //   />
+          // </Grid>
         ))}
-      </Grid>
+      </Stack>
     );
   };
 
@@ -55,6 +58,7 @@ const Skills = (): JSX.Element => {
           />
         </Grid>
       ))}
+      <Typography>Dodadkowo pracowalem z google maps, intl, lambdy, cognito</Typography>
     </Grid>
   );
 };
