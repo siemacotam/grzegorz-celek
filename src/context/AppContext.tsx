@@ -1,8 +1,5 @@
 import { Sections } from 'global';
 import { ReactNode, useState, createContext, useMemo } from 'react';
-import { UseQueryResult, useQueries } from 'react-query';
-import dataService from 'services/data.service';
-import { Quote } from 'services/model';
 
 export type AppContext = {
   mode: 'light' | 'dark';
@@ -11,8 +8,6 @@ export type AppContext = {
   changeSection: (section: Sections) => void;
   showChat: boolean;
   handleChatStatus: (state: boolean) => void;
-  images: UseQueryResult<string[]>;
-  quotes: UseQueryResult<Quote[]>;
 };
 
 interface AppContextProviderProps {
@@ -27,11 +22,6 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
   const [activeSection, setActiveSection] = useState<Sections>(Sections.ABOUT);
   const [showChat, setShowChat] = useState(false);
 
-  const [images, quotes] = useQueries([
-    { queryKey: ['images'], queryFn: () => dataService.getImages() },
-    { queryKey: ['quotes'], queryFn: () => dataService.getQuotes() }
-  ]);
-
   const props = useMemo(() => {
     const toggleMode = () => setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
 
@@ -44,11 +34,9 @@ export const AppContextProvider = ({ children }: AppContextProviderProps) => {
       activeSection,
       changeSection,
       showChat,
-      handleChatStatus,
-      images,
-      quotes
+      handleChatStatus
     };
-  }, [mode, activeSection, showChat, images, quotes]);
+  }, [mode, activeSection, showChat]);
 
   return <AppContext.Provider value={props}>{children}</AppContext.Provider>;
 };

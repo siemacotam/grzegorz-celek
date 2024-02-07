@@ -10,7 +10,7 @@ const Loader = (): JSX.Element => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (progress > 100) {
+      if (progress >= 100) {
         clearInterval(timer);
       }
       setProgress((oldProgress) => {
@@ -22,7 +22,9 @@ const Loader = (): JSX.Element => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [progress]);
+
+  if (progress >= 100) return <div />;
 
   return (
     <Backdrop

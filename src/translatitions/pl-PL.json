@@ -28,6 +28,7 @@
     "advanced": "Najsprawniej i najpewniej pracuje mi się w danych technologiach",
 
     "chat.hello" : "Witaj. Jak mogę Ci pomóc?",
+    "g.celek@gmail.com": "g.celek@gmail.com",
 
     "yuno.description" : "Holenderski start up związany z branżą hotelaska, zatrudniający ponad 70 osób. Przez niecały rok pracowałem nad aplikacją dla supportu pisaną w mikrofrontach - składającą sie między innymi z aplikacji umożliwiającej zarządzanie hotelami, użytkownikami, statystykami, channel menagerami oraz rezerwacjami. Po krótkiej przerwie spowodowaniej problemami finansowymi firmy wznowiliśmy pracę i wyszliśmy na produkcję. Od tego czasu pracuję nad stroną główną i jej konfiguracją pod rozwiązania white-label",
     "yuno.duties" : "Frontend, integracja z cognito, naprawa bugów, redesign, nowe funkcjonalności",

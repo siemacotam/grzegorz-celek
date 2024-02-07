@@ -28,6 +28,7 @@
     "advanced": "I am very confident in:",
 
     "chat.hello" : "Hello. How can I help You?",
+    "g.celek@gmail.com": "g.celek@gmail.com",
 
     "yuno.description" : "A Dutch start-up related to the hotel industry, employing over 70 people. For less than a year, I worked on a support application written in microfronts - consisting of, among others, an application enabling the management of hotels, users, statistics, channel managers and reservations. After a short break caused by the company's financial problems, we resumed work and went into production. Since then, I have been working on the home page and its configuration for white-label solutions",
     "yuno.duties" : "Frontend, integration with Cognito, bug fixes, redesign, new functionalities",

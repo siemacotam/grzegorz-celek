@@ -1,4 +1,4 @@
-import { useRef, useState, ChangeEvent, MutableRefObject, KeyboardEvent, useEffect } from 'react';
+import { useRef, useState, ChangeEvent, MutableRefObject, KeyboardEvent } from 'react';
 import {
   Slide,
   Paper,

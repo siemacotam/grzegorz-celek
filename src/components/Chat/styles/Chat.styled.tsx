@@ -25,7 +25,7 @@ export const MessageBackContainer = styled('div')(({ theme }) => ({
   borderRadius: '15px 15px 15px 5px'
 }));
 
-export const ChatContainer = styled(Stack)(({ theme }) => ({
+export const ChatContainer = styled(Stack)(() => ({
   height: 350,
   overflow: 'hidden',
   overflowY: 'scroll',
