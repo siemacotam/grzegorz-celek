@@ -37,12 +37,23 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
       )}
       {data.screen && (
         <Box
-          sx={{ border: `1px solid ${theme.palette.grey[300]}` }}
           mt={3}
-          component="img"
-          src={data.screen}
-          width="100%"
-        />
+          sx={{
+            border: `1px solid ${theme.palette.grey[300]}`,
+            borderRadius: '5px',
+            overflow: 'hidden'
+          }}
+        >
+          <Box
+            sx={{
+              transition: 'transform 0.15s ease-in-out',
+              '&:hover': { transform: 'scale3d(1.1, 1.1, 1)' }
+            }}
+            component="img"
+            src={data.screen}
+            width="100%"
+          />
+        </Box>
       )}
     </Stack>
   );

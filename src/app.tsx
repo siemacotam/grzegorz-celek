@@ -7,15 +7,16 @@ import { useDelay } from 'hooks/useDelay';
 import { ScrollButton } from 'components/ScrollButton';
 
 export const App = (): JSX.Element => {
-  // const { ready } = useDelay(mainLoaderTime);
+  const { ready } = useDelay(mainLoaderTime);
 
   return (
     <IntlProviderWrapper>
       <AppTranslation>
         <Stack minHeight="100vh">
           <CssBaseline />
-          {/* {ready ? <Layout /> : <Loader />} */}
-          <Layout />
+          {ready ? <Layout /> : <Loader />}
+          {/* <Layout /> */}
+          {/* <Loader /> */}
           <ScrollButton />
         </Stack>
       </AppTranslation>
