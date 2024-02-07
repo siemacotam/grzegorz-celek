@@ -20,7 +20,7 @@ const Post = ({ ready, text, content, date, panel = true }: PostProps): JSX.Elem
   return (
     <Card sx={{ height: '100%' }}>
       <CardContent>
-        <Stack direction="row" mb={1} spacing={2}>
+        <Stack direction="row" mb={2} spacing={2}>
           <Avatar alt="My avatar" sx={{ width: 50, height: 50 }} src={Image} />
           <Box>
             <Typography fontWeight="bold">Grzegorz Celek</Typography>
