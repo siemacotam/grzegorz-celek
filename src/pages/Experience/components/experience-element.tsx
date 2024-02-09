@@ -14,7 +14,7 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
     <Stack flexGrow={1} rowGap={1} p={{ xs: 3, md: 5 }} position="relative">
       {experienceHeaders(data).map(({ title, icon, value }) =>
         value ? (
-          <Stack rowGap={1}>
+          <Stack rowGap={1} key={title}>
             <Typography fontWeight="bold">{t(title)}</Typography>
             <Stack direction="row" alignItems="center" spacing={1}>
               {icon}
@@ -29,7 +29,9 @@ export const ExperienceElement = ({ data }: ExperienceElementProps): JSX.Element
                   Link
                 </Link>
               ) : (
-                <Typography>{t(value)}</Typography>
+                <Typography>
+                  {['about-company', 'duties'].includes(title) ? t(value) : value}
+                </Typography>
               )}
             </Stack>
           </Stack>

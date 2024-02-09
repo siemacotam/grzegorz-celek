@@ -1,34 +1,35 @@
-import { CircularProgress, Stack, useTheme } from '@mui/material';
+import { Box, CircularProgress, Typography, useTheme } from '@mui/material';
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { CV } from 'components/CV';
-import { useTranslation } from 'hooks/useTranslation';
-import DownloadIcon from '@mui/icons-material/Download';
+import { Locales } from 'pages/cv';
 import { StyledButton } from './styled';
 
-const PDFButton = (): JSX.Element => {
+interface PDFButtonProps {
+  lang: Locales;
+  handleClose: () => void;
+}
+
+const PDFButton = ({ lang, handleClose }: PDFButtonProps): JSX.Element => {
   const theme = useTheme();
-  const { t } = useTranslation();
 
   return (
-    <StyledButton>
+    <Box px={2}>
       <PDFDownloadLink
-        document={<CV t={t} />}
+        document={<CV lang={lang} />}
         fileName="GrzegorzCelekCV"
-        style={{ color: theme.palette.primary.main }}
+        style={{ color: theme.palette.primary.main, width: '100%' }}
       >
         {({ blob, url, loading, error }) =>
           loading ? (
             <CircularProgress size={20} />
           ) : (
-            <Stack direction="row" alignItems="center" justifyContent="center">
-              <PictureAsPdfIcon />
-              <DownloadIcon sx={{ fontSize: '16px' }} />
-            </Stack>
+            <Typography width="100%" onClick={handleClose}>
+              {lang === 'pl-PL' ? 'PL' : 'EN'}
+            </Typography>
           )
         }
       </PDFDownloadLink>
-    </StyledButton>
+    </Box>
   );
 };
 

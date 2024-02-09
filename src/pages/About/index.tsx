@@ -1,13 +1,12 @@
 /* eslint-disable */
-import { Grid, Card, CardContent, Typography, Stack, useTheme, Link, Box } from '@mui/material';
-import Post from 'components/Post';
+import { Grid, Card, CardContent, Typography, Stack, Link } from '@mui/material';
+import Post from 'components/post';
 import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
 import LanguageIcon from '@mui/icons-material/Language';
 import { aboutList } from 'pages/about/const';
 
 const About = (): JSX.Element => {
-  const theme = useTheme();
   const { t } = useTranslation();
   const { ready } = useDelay(500);
 

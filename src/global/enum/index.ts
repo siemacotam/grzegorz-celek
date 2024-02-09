@@ -3,5 +3,6 @@ export enum Sections {
   SKILLS = 'skills',
   CONTACT = 'contact',
   EXPERIENCE = 'experience',
-  EDUCATION = 'education'
+  EDUCATION = 'education',
+  CV = 'CV'
 }

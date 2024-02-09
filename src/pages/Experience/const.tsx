@@ -7,6 +7,7 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import yuno from 'images/yuno.png';
 import portfolio from 'images/portfolio.png';
+import carbook from 'images/carbook.png';
 
 const iconsStyle = { fontSize: '20px', color: '#D3D3D3' };
 
@@ -62,7 +63,7 @@ export interface Experience {
 export const experience: Experience[] = [
   {
     label: 'BIDROOM/YUNO',
-    dates: '4.2022-...',
+    dates: '04.2022-...',
     tech: 'React, Nuxt, Typescript, AWS, gRPC, microfrontends, prismic',
     duties: 'yuno.duties',
     description: 'yuno.description',
@@ -80,7 +81,7 @@ export const experienceProjects: Experience[] = [
     duties: '',
     description: 'piu.description',
     position: '',
-    link: 'https://piu.sklep.pl'
+    link: 'https://piu-fe-siemacotam.vercel.app'
   },
   {
     label: 'Carbook',
@@ -89,7 +90,8 @@ export const experienceProjects: Experience[] = [
     duties: '',
     description: 'carbook.description',
     position: '',
-    link: 'https://apptobet-production.up.railway.app/forum'
+    link: 'https://website-rouge-xi.vercel.app',
+    screen: carbook
   },
   {
     label: 'Muha',
@@ -98,7 +100,7 @@ export const experienceProjects: Experience[] = [
     duties: '',
     description: 'muha.description',
     position: '',
-    link: 'https://apptobet-production.up.railway.app/forum'
+    link: ''
   },
   {
     label: 'Portfolio',

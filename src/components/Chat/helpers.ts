@@ -1,11 +1,11 @@
-import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
+import { FormValues, MessageAuthor, MessageProps } from './types';
 
 export const formValidation = (step: number, form: FormValues): boolean => {
   switch (step) {
     case 0:
       return form.name !== '';
     case 1:
-      return form.email !== '';
+      return form.email !== '' || form.email.includes('@');
     case 2:
       return form.content !== '';
     default:

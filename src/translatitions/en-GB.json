@@ -21,7 +21,7 @@
     "github" : "Check my github account",
     "linkedin" : "Check my linkedin account",
 
-    "about-content" : "Hi ! My name is Greg. I am ex-handball player, who had finally found my dream job / passion. In 2019 i've stated my journey with programming, and since then this is my way. I am really ambitious, stubborn, hardworking and resourceful. I'm learning something new everyday.",
+    "about-content" : "Hi! My name is Greg. I'm a former handball player who finally found my dream job/passion. In 2019, I started my adventure with programming and since then it has been my path. I am really ambitious, stubborn, hard-working and resourceful. I learn something new every day.",
 
     "basic": "I also used in my projects",
     "good": "I feel comfortable with:",
@@ -34,7 +34,7 @@
     "yuno.duties" : "Frontend, integration with Cognito, bug fixes, redesign, new functionalities",
 
     "piu.description" : "Online store with dresses and jewelry, with a CMS system. The application is integrated with Dotpay payments and available in 3 language versions.",
-    "portfolio.description" : "Portfolio providing information about me. It allows you to change the language, contact details, download your CV in PDF format and change the mode to night mode",
+    "portfolio.description" : "Portfolio providing information about me. It allows you to change the language, contact me, download CV in PDF format and change the view mode",
     "muha.description" : "Portal with job offers for our guests from Ukraine. The portal allows you to add employers/agencies and job offers and express opinions about them. In addition to the website, the entire CMS system was also coded. The portal is not operational yet - the production date is very close",
     "carbook.description" : "Portal with cars for long-term rental. In addition to the home page, a cms system was also created to manage cars and additional packages",
     
@@ -47,12 +47,14 @@
     "link" : "Link",
     "message-me" : "Send message",
     "name" : "Hello. Whats Your name ?",
-    "email" : "Nice to see You. What is Your email adress ?",
+    "email" : "Nice to see You {0}. What is Your email adress ?",
     "message" : "Thanks. Now, You can write message :)",
     "send" : "Thanks. Are You sure You want to send that email ?",
     "sent" : "Thanks. Message is sent",
     "required": "I will not accept empty fields! :)",
     "fail" : "Ok i understand. Next time :)",
+    "studies" : "Studies",
+    "courses" : "Courses",
 
     "loader1": "Loading the data ...",
     "loader2": "Loading achievements ...",
@@ -60,11 +62,32 @@
     "loader4": "Final touches ...",
     "loader5": "We're almost there !",
 
-    "randomDog" : "I am adding photo of random dog :) Breed",
     "like": "Like",
     "comment": "Comment",
     "share": "Share",
     "error" : "Ups something went wrong. Please try again later",
+
+    "course1": "A series of 6 courses from Samurai programming (approx. 300 hours)",
+    "course2": "Advanced React TypeScript Redux StyledComponents - Barry Michael Doyle",
+    "course3": "Many smaller courses with materials that required additional study",
+
+    "communication": "Communication",
+    "determination": "Determination",
+    "teamwork" : "Teamwork",
+    "adaptability" : "Adaptability",
+    "problem-solving" : "Problem-solving",
+    "critical-thinking" : "Critical thinking",
+
+    "details": "Details",
+    "soft-skills": "Soft skills",
+    "main-skills" : "Skills",
+    "secondary-skills" : "Additional",
+    "CV": "CV",
+
+    "rodo": "I consent to the processing of my personal data by (company name) for the purpose of recruiting for the position I am applying for.",
+
+    "yes": "Yes",
+    "no": "No",
 
     "fallow" : "Fallow me"
 }

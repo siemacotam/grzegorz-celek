@@ -11,13 +11,15 @@ import localDataEN from 'translatitions/en-GB.json';
 import localDataPL from 'translatitions/pl-PL.json';
 import { Setup, AppTranslationProps } from './types';
 
+export const locales = ['en-GB', 'pl-PL'];
+
 dayjs.extend(weekday);
 dayjs.extend(localeData);
 
 const setup: Setup = {
   locale: 'pl-PL',
   localeDefalut: 'pl-PL',
-  allowedLocales: ['en-GB', 'pl-PL'], // TODO - add other translations here
+  allowedLocales: locales,
   translations: {
     'en-GB': localDataEN,
     'pl-PL': localDataPL

@@ -1,12 +1,12 @@
 import { Translation } from 'hooks/useTranslation';
-import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
+import { FormValues, MessageAuthor, MessageProps } from './types';
 
-export const pageMessagesList = (t: Translation): MessageProps[] => [
+export const pageMessagesList = (t: Translation, name?: string): MessageProps[] => [
   {
     message: t('name'),
     from: MessageAuthor.page
   },
-  { message: t('email'), from: MessageAuthor.page },
+  { message: t('email', { 0: name }), from: MessageAuthor.page },
   { message: t('message'), from: MessageAuthor.page }
 ];
 

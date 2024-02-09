@@ -1,5 +1,5 @@
 import { styled, Stack } from '@mui/material';
-import { MessageAuthor } from '../Chat.types';
+import { MessageAuthor } from '../types';
 
 interface MessageContainerProps {
   from: MessageAuthor;
@@ -23,13 +23,4 @@ export const MessageBackContainer = styled('div')(({ theme }) => ({
   padding: '10px 15px',
   backgroundColor: theme.palette.grey[300],
   borderRadius: '15px 15px 15px 5px'
-}));
-
-export const ChatContainer = styled(Stack)(() => ({
-  height: 350,
-  overflow: 'hidden',
-  overflowY: 'scroll',
-  padding: 8,
-  pr: 2,
-  rowGap: 8
 }));

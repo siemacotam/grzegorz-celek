@@ -48,7 +48,7 @@
     "link" : "Link",
     "message-me" : "Wyślij wiadomość",
     "name" : "Witaj. Jak masz na imię ?",
-    "email" : "Miło Cię poznać. Jaki jest twój adres email ?",
+    "email" : "Miło Cię poznać {0}. Jaki jest twój adres email ?",
     "message" : "Dziekuję za informację. Teraz wpisz treść wiadomości :)",
     "send" : "Dziekuję. Czy na pewno chcesz wysłać te dane do mnie ?",
     "sent" : "Dziekuję. Wiadomość została wysłana",
@@ -61,12 +61,35 @@
     "loader3": "Zliczam godziny spędzone przed komputerem ...",
     "loader4": "Ostatnie dociągnięcia ...",
     "loader5": "Już prawie jesteśmy !",
+    "studies" : "Studia",
+    "courses" : "Kursy",
 
-    "randomDog" : "Dodaje zdjęcie przykładowego psa którego zobaczyłem. Rasa ",
     "like": "Lubie to",
     "comment": "Komentarz",
     "share": "Wyślij",
     "error" : "Ups coś poszło nie tak, Spróbuj pownownie później",
 
+    "course1": "Cykl 6 kursów od Samuraj programowania (ok 300h)",
+    "course2": "Advanced React TypeScript Redux StyledComponents - Barry Michael Doyle",
+    "course3": "Wiele mniejszych kursów z materiałami które wymagały dodatkowej nauki",
+
+    "communication": "Komunikatywny",
+    "determination": "Zdeterminowany",
+    "teamwork" : "Praca w zespole",
+    "adaptability" : "Zdolość adaptacji",
+    "problem-solving" : "Rozwiązywanie problemów",
+    "critical-thinking" : "Krytyczne myślenie",
+
+    "details": "Dane kontaktowe",
+    "soft-skills": "Umiejętności miękkie",
+    "main-skills" : "Technologie",
+    "secondary-skills" : "Dodatkowe",
+    "CV": "CV",
+    
+    "rodo": "Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.",
+
+    "yes": "Tak",
+    "no": "Nie",
+    
     "fallow" : "Moje social media"
 }

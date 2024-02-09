@@ -31,6 +31,7 @@ export const getSkillsList = (skills: ISkill[]): JSX.Element => {
     <Stack direction="row" flexWrap="wrap" rowGap={1}>
       {skills.map(({ icon, label }) => (
         <Chip
+          key={label}
           size="small"
           variant="outlined"
           icon={icon}
@@ -75,16 +76,20 @@ export const mainSkills: ISkill[] = [
     label: 'AWS'
   },
   {
+    icon: <SiNuxtdotjs style={{ ...iconsStyle, color: blue }} />,
+    label: 'Nuxt'
+  }
+];
+
+export const secondarySkills: ISkill[] = [
+  {
     icon: <BiLogoNodejs style={iconsStyle} />,
     label: 'Node'
   },
   {
     icon: <BiLogoMongodb style={iconsStyle} />,
     label: 'Mongo'
-  }
-];
-
-export const secondarySkills: ISkill[] = [
+  },
   {
     icon: <SiJirasoftware style={{ ...iconsStyle, color: blue }} />,
     label: 'Jira'
@@ -144,10 +149,6 @@ export const additionalSkills: ISkill[] = [
   {
     icon: <SiAwsamplify style={{ ...iconsStyle, color: blue }} />,
     label: 'Amplify'
-  },
-  {
-    icon: <SiNuxtdotjs style={{ ...iconsStyle, color: blue }} />,
-    label: 'Nuxt'
   },
   {
     icon: <div />,

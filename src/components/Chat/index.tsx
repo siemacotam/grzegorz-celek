@@ -13,14 +13,13 @@ import {
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import { useTranslation } from 'hooks/useTranslation';
-import './styles/chat.css';
+import './components/chat.css';
 import { useAppContext } from 'hooks/useAppContext';
-import { ChatContainer } from './styles/Chat.styled';
-import { FormValues, MessageAuthor, MessageProps } from './Chat.types';
-import { emptyFieldMessage, initialFormValues, pageMessagesList } from './Chat.const';
-import { formValidation, sendUserMessage } from './Chat.helpers';
+import { FormValues, MessageAuthor, MessageProps } from './types';
+import { emptyFieldMessage, initialFormValues, pageMessagesList } from './const';
+import { formValidation, sendUserMessage } from './helpers';
 import { Message } from './components/message';
-import { ChatHeader } from './components/chatHeader';
+import { ChatHeader } from './components/chat-header';
 
 export const Chat = (): JSX.Element => {
   const { t } = useTranslation();
@@ -55,6 +54,9 @@ export const Chat = (): JSX.Element => {
   };
 
   const handleChangeStep = () => {
+    if (inputRef.current.value === '') {
+      return;
+    }
     setMessages((prev) => [...prev, sendUserMessage(step, form)]);
     clearInput();
 
@@ -65,7 +67,7 @@ export const Chat = (): JSX.Element => {
       if (newStep > 2) {
         return;
       }
-      const newMessasge = pageMessagesList(t)[newStep];
+      const newMessasge = pageMessagesList(t, form.name)[newStep];
       setMessages((prev) => [...prev, newMessasge]);
 
       return;
@@ -100,12 +102,18 @@ export const Chat = (): JSX.Element => {
   };
 
   return (
-    <Box position="fixed" bottom="0px" right="20px">
+    <Box
+      zIndex={100}
+      position="fixed"
+      top={{ xs: '56px', sm: 'auto' }}
+      bottom="0px"
+      right={{ xs: 0, sm: '20px' }}
+    >
       <Slide direction="up" in={showChat} mountOnEnter unmountOnExit>
         <Paper
           sx={{
-            height: '450px',
-            width: '350px',
+            height: { xs: '100%', sm: '450px' },
+            width: { xs: '100vw', sm: '350px' },
             display: 'flex',
             flexDirection: 'column',
             borderBottomLeftRadius: 0,
@@ -118,7 +126,16 @@ export const Chat = (): JSX.Element => {
           <ChatHeader />
           <Stack flexGrow={1}>
             <Stack>
-              <ChatContainer>
+              <Stack
+                height={{ xs: 'calc(100vh - 146px)', sm: '350px' }}
+                sx={{
+                  overflow: 'hidden',
+                  overflowY: 'scroll'
+                }}
+                padding={1}
+                pr={2}
+                rowGap={1}
+              >
                 {messages.map(({ message, from }) => (
                   <Message from={from} text={message} />
                 ))}
@@ -129,10 +146,10 @@ export const Chat = (): JSX.Element => {
                     buttons={
                       <Stack direction="row" justifyContent="space-evenly" py={1}>
                         <Button disabled={step !== 3} variant="contained" onClick={handleSubmit}>
-                          tak
+                          {t('yes')}
                         </Button>
                         <Button disabled={step !== 3} variant="outlined" onClick={() => setStep(5)}>
-                          nie
+                          {t('no')}
                         </Button>
                       </Stack>
                     }
@@ -142,11 +159,12 @@ export const Chat = (): JSX.Element => {
                 {step === 5 && <Message from={MessageAuthor.page} text={t('fail')} />}
                 {step === 6 && <Message from={MessageAuthor.page} text={t('error')} />}
                 <div id="chatEnd" />
-              </ChatContainer>
+              </Stack>
             </Stack>
           </Stack>
-          <Box height="60px" px={2}>
+          <Box height="50px" px={2}>
             <TextField
+              size="small"
               inputRef={inputRef}
               fullWidth
               autoFocus
@@ -156,7 +174,7 @@ export const Chat = (): JSX.Element => {
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
-                    <IconButton disabled={step > 2}>
+                    <IconButton disabled={step > 2 || Boolean(inputRef.current?.value === '')}>
                       <SendIcon
                         sx={{ color: theme.palette.primary.main }}
                         onClick={handleChangeStep}

@@ -1,8 +1,23 @@
-import { Grid, Stack, Typography, Card, CardContent, Box } from '@mui/material';
-import Post from 'components/Post';
+import {
+  Grid,
+  Stack,
+  Typography,
+  Card,
+  CardContent,
+  Box,
+  List,
+  ListItem,
+  ListSubheader,
+  ListItemIcon
+} from '@mui/material';
+import Post from 'components/post';
 import { useDelay } from 'hooks/useDelay';
 import { useTranslation } from 'hooks/useTranslation';
+import SchoolIcon from '@mui/icons-material/School';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import awf from 'images/awf.png';
+
+const courses = ['course1', 'course2', 'course3'];
 
 export const Education = (): JSX.Element => {
   const { t } = useTranslation();
@@ -25,14 +40,27 @@ export const Education = (): JSX.Element => {
             date="2008 - 2013"
             content={
               <Stack direction="row" spacing={3}>
-                <Box>
-                  <Box component="img" src={awf} />
+                <Box display={{ xs: 'none', md: 'block' }}>
+                  <Box component="img" src={awf} sx={{ maxWidth: '80px' }} />
                 </Box>
-                <Stack>
-                  <Typography>AWF WROCŁAW</Typography>
-                  <Typography>Wychowanie fizyczne</Typography>
-                  <Typography>Sport</Typography>
-                </Stack>
+
+                <List sx={{ p: 0 }}>
+                  <ListSubheader sx={{ p: 0, lineHeight: '16px', pb: 2 }}>
+                    AWF WROCŁAW
+                  </ListSubheader>
+                  <ListItem>
+                    <ListItemIcon>
+                      <SchoolIcon />
+                    </ListItemIcon>
+                    Wychowanie fizyczne - licencjat
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon>
+                      <SchoolIcon />
+                    </ListItemIcon>
+                    Sport - licencjat + magister
+                  </ListItem>
+                </List>
               </Stack>
             }
           />
@@ -52,7 +80,17 @@ export const Education = (): JSX.Element => {
             date="2019 - ..."
             content={
               <Stack>
-                <Typography>Liczne kursy</Typography>
+                <List sx={{ p: 0 }}>
+                  <ListSubheader sx={{ p: 0, lineHeight: '16px', pb: 2 }}>UDEMY</ListSubheader>
+                  {courses.map((el) => (
+                    <ListItem key={el}>
+                      <ListItemIcon>
+                        <AutoStoriesIcon />
+                      </ListItemIcon>
+                      {t(el)}
+                    </ListItem>
+                  ))}
+                </List>
               </Stack>
             }
           />

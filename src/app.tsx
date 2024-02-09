@@ -2,7 +2,7 @@ import { CssBaseline, Stack } from '@mui/material';
 import { Layout } from 'layout';
 import Loader from 'components/loader';
 import { AppTranslation, IntlProviderWrapper } from 'translation';
-import { ScrollButton } from 'components/ScrollButton';
+import { ScrollButton } from 'components/scroll-button';
 
 export const App = (): JSX.Element => {
   return (
@@ -11,7 +11,7 @@ export const App = (): JSX.Element => {
         <Stack minHeight="100vh">
           <CssBaseline />
           <Layout />
-          <Loader />
+          {/* <Loader /> */}
           <ScrollButton />
         </Stack>
       </AppTranslation>

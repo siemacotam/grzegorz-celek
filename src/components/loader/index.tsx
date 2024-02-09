@@ -26,24 +26,6 @@ const Loader = (): JSX.Element => {
     return () => clearInterval(intervalRef.current as NodeJS.Timeout);
   }, []);
 
-  console.log(progress);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     if (progress >= 100) {
-  //       clearInterval(timer);
-  //     }
-  //     setProgress((oldProgress) => {
-  //       const diff = Math.random() * 10;
-  //       return Math.min(oldProgress + diff, 100);
-  //     });
-  //   }, 400);
-
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, [progress]);
-
   if (progress >= 100) return <div />;
 
   return (

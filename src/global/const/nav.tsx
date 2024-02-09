@@ -1,5 +1,6 @@
 import { Sections } from 'global/enum';
 import About from 'pages/about';
+import { CVPage } from 'pages/cv';
 import { Education } from 'pages/education';
 import { Experience } from 'pages/experience';
 import Skills from 'pages/skills';
@@ -25,5 +26,9 @@ export const sections: SectionObject[] = [
   {
     name: Sections.EDUCATION,
     component: <Education />
+  },
+  {
+    name: Sections.CV,
+    component: <CVPage />
   }
 ];

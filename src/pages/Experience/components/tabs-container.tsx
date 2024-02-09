@@ -38,6 +38,7 @@ export const TabsContainer = ({ elements }: TabsContainerProps): JSX.Element => 
           >
             {elements.map(({ label }) => (
               <Tab
+                key={label}
                 sx={{
                   fontWeight: '600',
                   textTransform: 'capitalize',

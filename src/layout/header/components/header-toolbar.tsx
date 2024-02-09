@@ -1,9 +1,9 @@
 import { AppBar, Toolbar, useTheme } from '@mui/material';
-import PDFButton from 'layout/header/components/buttons/pdf';
 import ModeSwitch from 'layout/header/components/buttons/mode-switch';
 import LanguageSwitch from 'layout/header/components/buttons/language';
 import { useAppContext } from 'hooks/useAppContext';
 import { MenuContainer } from '../styled';
+import { PDFMenu } from './buttons/pdf-menu';
 
 export const HeaderToolbar = () => {
   const theme = useTheme();
@@ -20,7 +20,7 @@ export const HeaderToolbar = () => {
         }}
       >
         <MenuContainer>
-          <PDFButton />
+          <PDFMenu />
           <ModeSwitch />
           <LanguageSwitch />
         </MenuContainer>

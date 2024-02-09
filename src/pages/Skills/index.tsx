@@ -1,7 +1,7 @@
 import { Grid, Card, CardContent, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
 import { useDelay } from 'hooks/useDelay';
-import Post from 'components/Post';
+import Post from 'components/post';
 import { additionalSkills, getSkillsList, mainSkills, secondarySkills } from './const';
 import { StyledText } from './styled';
 
