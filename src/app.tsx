@@ -11,7 +11,7 @@ export const App = (): JSX.Element => {
         <Stack minHeight="100vh">
           <CssBaseline />
           <Layout />
-          {/* <Loader /> */}
+          <Loader />
           <ScrollButton />
         </Stack>
       </AppTranslation>

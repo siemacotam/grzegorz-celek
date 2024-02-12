@@ -38,7 +38,7 @@
     "muha.description" : "Portal with job offers for our guests from Ukraine. The portal allows you to add employers/agencies and job offers and express opinions about them. In addition to the website, the entire CMS system was also coded. The portal is not operational yet - the production date is very close",
     "carbook.description" : "Portal with cars for long-term rental. In addition to the home page, a cms system was also created to manage cars and additional packages",
     
-    "company" : "Company name",
+    "company" : "Name",
     "duration" : "Period of cooperation",
     "position" : "Position",
     "tech" : "Tech stack",

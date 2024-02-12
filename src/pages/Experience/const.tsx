@@ -8,6 +8,7 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import yuno from 'images/yuno.png';
 import portfolio from 'images/portfolio.png';
 import carbook from 'images/carbook.png';
+import piu from 'images/piu.png';
 
 const iconsStyle = { fontSize: '20px', color: '#D3D3D3' };
 
@@ -81,7 +82,8 @@ export const experienceProjects: Experience[] = [
     duties: '',
     description: 'piu.description',
     position: '',
-    link: 'https://piu-fe-siemacotam.vercel.app'
+    link: 'https://piu-fe-siemacotam.vercel.app',
+    screen: piu
   },
   {
     label: 'Carbook',

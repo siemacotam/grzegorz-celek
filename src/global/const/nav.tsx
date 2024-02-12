@@ -26,9 +26,9 @@ export const sections: SectionObject[] = [
   {
     name: Sections.EDUCATION,
     component: <Education />
-  },
-  {
-    name: Sections.CV,
-    component: <CVPage />
   }
+  // {
+  //   name: Sections.CV,
+  //   component: <CVPage />
+  // }
 ];

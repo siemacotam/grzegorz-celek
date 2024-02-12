@@ -34,11 +34,13 @@ export const Header = (): JSX.Element => {
               ∞ {t('hours')}
             </Typography>
           </NameContainer>
-          <Box sx={{ py: '20px' }}>
+          <Box sx={{ py: '20px', display: { xs: 'none', sm: 'block' } }}>
             <ChatButton />
           </Box>
         </InfoPanelContainer>
-        <HeaderNav />
+        <Box pt={{ xs: '20px', sm: 0 }}>
+          <HeaderNav />
+        </Box>
       </HeaderContainer>
     </>
   );
