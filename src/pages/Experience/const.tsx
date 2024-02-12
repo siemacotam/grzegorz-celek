@@ -95,15 +95,15 @@ export const experienceProjects: Experience[] = [
     link: 'https://website-rouge-xi.vercel.app',
     screen: carbook
   },
-  {
-    label: 'Muha',
-    dates: '',
-    tech: 'React, Nextjs, Typescript, Express, MongoDB',
-    duties: '',
-    description: 'muha.description',
-    position: '',
-    link: ''
-  },
+  // {
+  //   label: 'Muha',
+  //   dates: '',
+  //   tech: 'React, Nextjs, Typescript, Express, MongoDB',
+  //   duties: '',
+  //   description: 'muha.description',
+  //   position: '',
+  //   link: ''
+  // },
   {
     label: 'Portfolio',
     dates: '',
