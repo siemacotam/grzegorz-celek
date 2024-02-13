@@ -2,7 +2,6 @@ import { Box, CircularProgress, Typography, useTheme } from '@mui/material';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { CV } from 'components/CV';
 import { Locales } from 'pages/cv';
-import { StyledButton } from './styled';
 
 interface PDFButtonProps {
   lang: Locales;

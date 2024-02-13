@@ -1,7 +1,7 @@
 import { Fab, Zoom, useScrollTrigger } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
-export const ScrollButton = () => {
+export const ScrollButton = (): JSX.Element => {
   const trigger = useScrollTrigger();
 
   const handleClick = (event: any) => {

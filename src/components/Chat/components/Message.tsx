@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Box, Avatar, Stack, Typography } from '@mui/material';
 import Image from 'images/small.jpg';
 import { useDelay } from 'hooks/useDelay';
-import { MessageContainer, Message as ChatMessage } from './styled';
+import { MessageContainer, Message as ChatMessage } from 'components/chat/components/styled';
 import { MessageAuthor } from '../types';
 
 interface MessageProps {

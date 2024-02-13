@@ -6,6 +6,10 @@ import ReplyIcon from '@mui/icons-material/Reply';
 import ThumbUpRoundedIcon from '@mui/icons-material/ThumbUpRounded';
 import { useEffect, useState } from 'react';
 
+const getRandomLikesQuantity = (): number => Math.floor(Math.random() * 100);
+
+const iconStyles = { fontSize: '18px' };
+
 export const LikePanel = (): JSX.Element => {
   const [likes, setLikes] = useState(0);
   const [add, setAdd] = useState(true);
@@ -13,15 +17,16 @@ export const LikePanel = (): JSX.Element => {
   const theme = useTheme();
 
   useEffect(() => {
-    const number = Math.floor(Math.random() * 100);
-    setLikes(number);
+    setLikes(getRandomLikesQuantity());
   }, []);
 
-  const addLike = () => setLikes((prev) => prev + 1);
-  const removeLike = () => setLikes((prev) => prev - 1);
-  const toggleAdd = () => setAdd((prev) => !prev);
+  const toggleLike = () => {
+    if (add) {
+      setLikes((prev) => prev + 1);
+    } else setLikes((prev) => prev - 1);
 
-  const iconStyles = { fontSize: '18px' };
+    setAdd((prev) => !prev);
+  };
 
   return (
     <Stack mt={2} rowGap={1}>
@@ -56,11 +61,7 @@ export const LikePanel = (): JSX.Element => {
             startIcon={
               add ? <ThumbUpOffAltIcon sx={iconStyles} /> : <ThumbUpRoundedIcon sx={iconStyles} />
             }
-            onClick={() => {
-              const fn = add ? addLike : removeLike;
-              fn();
-              toggleAdd();
-            }}
+            onClick={toggleLike}
           >
             {t('like')}
           </Button>

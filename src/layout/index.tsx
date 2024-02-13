@@ -1,5 +1,5 @@
 import { CssBaseline } from '@mui/material';
-import { Chat } from 'components/Chat';
+import { Chat } from 'components/chat';
 import { useAppContext } from 'hooks/useAppContext';
 import { Main } from './main';
 import { AppContainer } from './styled';

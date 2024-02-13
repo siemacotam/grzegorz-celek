@@ -1,4 +1,4 @@
-import { styled, Stack } from '@mui/material';
+import { styled } from '@mui/material';
 import { MessageAuthor } from '../types';
 
 interface MessageContainerProps {

@@ -1,32 +1,22 @@
 import { useRef, useState, ChangeEvent, MutableRefObject, KeyboardEvent } from 'react';
-import {
-  Slide,
-  Paper,
-  Box,
-  useTheme,
-  IconButton,
-  Stack,
-  Button,
-  TextField,
-  InputAdornment
-} from '@mui/material';
+import { Slide, Paper, Box, useTheme, IconButton, TextField, InputAdornment } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import { useTranslation } from 'hooks/useTranslation';
 import './components/chat.css';
 import { useAppContext } from 'hooks/useAppContext';
-import { FormValues, MessageAuthor, MessageProps } from './types';
-import { emptyFieldMessage, initialFormValues, pageMessagesList } from './const';
-import { formValidation, sendUserMessage } from './helpers';
-import { Message } from './components/message';
-import { ChatHeader } from './components/chat-header';
+import { FormValues, MessageProps } from 'components/chat/types';
+import { emptyFieldMessage, initialFormValues, pageMessagesList } from 'components/chat/const';
+import { formValidation, sendUserMessage } from 'components/chat/helpers';
+import { ChatHeader } from 'components/chat/components/chat-header';
+import { ChatContent } from './components/chat-content';
 
 export const Chat = (): JSX.Element => {
   const { t } = useTranslation();
-  const { showChat } = useAppContext();
   const [step, setStep] = useState(0);
   const [messages, setMessages] = useState<MessageProps[]>([pageMessagesList(t)[step]]);
   const [form, setFormValues] = useState<FormValues>(initialFormValues);
+  const { showChat } = useAppContext();
 
   const theme = useTheme();
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
@@ -83,23 +73,22 @@ export const Chat = (): JSX.Element => {
 
   const { name, email, content } = form;
 
-  const handleSubmit = () => {
-    emailjs
-      .send(
-        'service_lkksa9m',
-        'template_416z4ul',
-        { name, email, message: content },
-        'user_zigbQOKf4glqHQVOsVBIa'
-      )
-      .then(
-        () => {
-          setStep(4);
-        },
-        () => {
-          setStep(6);
-        }
-      );
+  const handleSubmit = async () => {
+    const res = await emailjs.send(
+      'service_lkksa9m',
+      'template_416z4ul',
+      { name, email, message: content },
+      'user_zigbQOKf4glqHQVOsVBIa'
+    );
+
+    if (!res) {
+      setStep(6);
+      return;
+    }
+    setStep(4);
   };
+
+  const handleCancelSendingMessage = () => setStep(5);
 
   return (
     <Box
@@ -124,44 +113,12 @@ export const Chat = (): JSX.Element => {
           elevation={4}
         >
           <ChatHeader />
-          <Stack flexGrow={1}>
-            <Stack>
-              <Stack
-                height={{ xs: 'calc(100vh - 146px)', sm: '350px' }}
-                sx={{
-                  overflow: 'hidden',
-                  overflowY: 'scroll'
-                }}
-                padding={1}
-                pr={2}
-                rowGap={1}
-              >
-                {messages.map(({ message, from }) => (
-                  <Message from={from} text={message} />
-                ))}
-                {step > 2 && (
-                  <Message
-                    from={MessageAuthor.page}
-                    text={t('send')}
-                    buttons={
-                      <Stack direction="row" justifyContent="space-evenly" py={1}>
-                        <Button disabled={step !== 3} variant="contained" onClick={handleSubmit}>
-                          {t('yes')}
-                        </Button>
-                        <Button disabled={step !== 3} variant="outlined" onClick={() => setStep(5)}>
-                          {t('no')}
-                        </Button>
-                      </Stack>
-                    }
-                  />
-                )}
-                {step === 4 && <Message from={MessageAuthor.page} text={t('sent')} />}
-                {step === 5 && <Message from={MessageAuthor.page} text={t('fail')} />}
-                {step === 6 && <Message from={MessageAuthor.page} text={t('error')} />}
-                <div id="chatEnd" />
-              </Stack>
-            </Stack>
-          </Stack>
+          <ChatContent
+            messages={messages}
+            step={step}
+            handleSubmit={handleSubmit}
+            handleCancelSendingMessage={handleCancelSendingMessage}
+          />
           <Box height="50px" px={2}>
             <TextField
               size="small"
