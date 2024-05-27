@@ -1,6 +1,5 @@
 import { Typography, useTheme, Box } from '@mui/material';
 import { useTranslation } from 'hooks/useTranslation';
-import { ChatButton } from 'layout/header/components/buttons/chat';
 import {
   BackgroundPhoto,
   HeaderContainer,
@@ -34,9 +33,9 @@ export const Header = (): JSX.Element => {
               ∞ {t('hours')}
             </Typography>
           </NameContainer>
-          <Box sx={{ py: '20px', display: { xs: 'none', sm: 'block' } }}>
+          {/* <Box sx={{ py: '20px', display: { xs: 'none', sm: 'block' } }}>
             <ChatButton />
-          </Box>
+          </Box> */}
         </InfoPanelContainer>
         <Box pt={{ xs: '20px', sm: 0 }}>
           <HeaderNav />

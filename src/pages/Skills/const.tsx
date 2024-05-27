@@ -20,7 +20,8 @@ import {
   SiAwsamplify,
   SiNuxtdotjs,
   SiPrismic,
-  SiJest
+  SiJest,
+  SiGoogletagmanager
 } from 'react-icons/si';
 import { FcGoogle } from 'react-icons/fc';
 import { BsFiletypeScss } from 'react-icons/bs';
@@ -53,7 +54,7 @@ const yellow = '#FFEA00';
 export const mainSkills: ISkill[] = [
   {
     icon: <BiLogoJavascript style={{ ...iconsStyle, color: yellow }} />,
-    label: 'JS'
+    label: 'Java Script'
   },
   {
     icon: <BiLogoReact style={{ ...iconsStyle, color: blue }} />,
@@ -149,6 +150,10 @@ export const additionalSkills: ISkill[] = [
   {
     icon: <SiAwsamplify style={{ ...iconsStyle, color: blue }} />,
     label: 'Amplify'
+  },
+  {
+    icon: <SiGoogletagmanager style={{ ...iconsStyle, color: blue }} />,
+    label: 'GTM'
   },
   {
     icon: <div />,
